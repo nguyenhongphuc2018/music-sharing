@@ -12,7 +12,9 @@
 //
 //= require jquery3
 //= require bootstrap.min
-//= require rails-ujs
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require adminlte.min
 //= require owl.carousel.min

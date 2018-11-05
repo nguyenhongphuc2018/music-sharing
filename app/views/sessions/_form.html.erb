@@ -1,0 +1,34 @@
+<%= form_for :session, url: login_path do |f| %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+     <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="form-group">
+        <%= f.label :remember_me, class:"checkbox inline" do %>
+          <%= f.check_box :remember_me %>&nbsp;&nbsp;&nbsp;
+          <span><%= t ".remember" %></span>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="form-group text-right">
+        <%= link_to t(".forgot_password"), root_path %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 text-left">
+      <%= f.submit t(".login"), class:"btn btn-primary btn-block" %>
+    </div>
+    <div class="col-xs-12 col-md-6 text-right bottom-right">
+    <p><%= t ".not_have_account" %> <%= link_to t(".signup"), signup_path,
+      remote: true, data: {toggle: "modal", target: "#signUpModal"} %></p>
+    </div>
+  </div>
+<% end %>

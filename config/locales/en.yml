@@ -1,2 +1,30 @@
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "Bmusic"
+  shared:
+    header:
+      B: "B"
+      music: "Music"
+      songs: "Songs"
+      playlists: "Play Lists"
+      search: "Search"
+      upload: "Upload"
+      name: "Alexander Pierce"
+      name2: "Alexander Pierce - Web Developer"
+      profile: "Profile"
+      logout: "Sign Out"
+    footer:
+      B: "B"
+      music: "Music"
+      blockquote: "Bạn đã bao giờ nghĩ về cuộc sống sẽ là gì nếu không có âm nhạc? Âm nhạc là một phương tiện giúp cho chúng ta giải trí, xóa bỏ căng thẳng, là cách để chúng ta học hỏi, phát triển cảm xúc bản thân. Nếu như không có âm nhạc có lẽ cuộc sống sẽ thật yên tĩnh và tẻ nhạt"
+      products: "Products"
+      useful_link: "Useful links"
+      link: "Useful links"
+      address: "Handico Office, Pham Hung Street, HaNoi, VietNam"
+      email: "framgia.com"
+      tel: "+ 01 234 567 88"
+      fax: "+ 01 234 567 89"
+      copyright: "© 2018 Copyright"
+      get_social_network: "Get connected with us on social networks!"
+

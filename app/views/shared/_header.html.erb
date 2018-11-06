@@ -30,20 +30,21 @@
       </div>
       <div class="navbar-custom-menu navbar-right">
         <ul class="nav navbar-nav">
-          <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= t ".upload" %><i class="fa fa-upload"></i>
-            </a>
-          </li>
           <% if logged_in? %>
+            <li class="dropdown notifications-menu">
+              <%= link_to new_song_path do %>
+                <%= t ".upload" %> <i class="fa fa-upload"></i>
+              <% end %>
+            </li>
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <%= image_tag "user8", class:"user-image" %>
+                <%= image_tag "/assets/img_lights.jpg", class:"user-image" %>
                 <span class="hidden-xs"><%= current_user.name %></span>
               </a>
               <ul class="dropdown-menu">
                 <li class="user-header">
-                  <%= image_tag "user8", class:"img-fluid" %>
+                  <%= image_tag "/assets/img_lights.jpg", class:"img-fluid" %>
+                  <p><%= t ".name2"%></p>
                 </li>
                 <li class="user-footer">
                   <div class="pull-left">

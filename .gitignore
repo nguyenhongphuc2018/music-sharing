@@ -1,8 +1,8 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
+/log/*
+/tmp/*
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -30,6 +30,7 @@ config/storage.yml
 /.bundle
 /test
 /vendor/bundle
+/public/uploads/*
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset

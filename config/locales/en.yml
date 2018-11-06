@@ -116,3 +116,25 @@ en:
       content: "Welcome to the IMusic! Click on the link below to activate your
         account."
       link: "Active your account"
+  songs:
+    new:
+      title_upload: "Upload song"
+      headerupload: "Đăng tải bài hát"
+      namesong: "Tên bài hát, video:"
+      placeholder_song: "Nhập tên bài hát..."
+      namesinger: "Ca sĩ, diễn viên trình diễn:"
+      nameauthor: "Tác giả bài hát:"
+      imagename: "Ảnh nền"
+      filesong: "File bài hát"
+      category_select: "Thể loại"
+      upload: "Upload"
+      add: "Add"
+    singer_fields:
+      placeholder_singer: "Nhập tên ca sĩ, diễn viên..."
+      remove: "Remove"
+    author_fields:
+      placeholder_author: "Nhập tên tác giả..."
+      remove: "Remove"
+    create:
+      add_song_successfully: "Đăng tải bài hát thành công!!"
+      add_song_fail: "Đăng tải bài hát thất bại!!"

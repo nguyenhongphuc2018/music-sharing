@@ -1,7 +1,7 @@
 en:
   layouts:
     application:
-      title: "Bmusic"
+      base_title: "IMusic"
   shared:
     header:
       B: "B"
@@ -13,7 +13,10 @@ en:
       name: "Alexander Pierce"
       name2: "Alexander Pierce - Web Developer"
       profile: "Profile"
-      logout: "Sign Out"
+      signup: "Sign up"
+      login: "Log in"
+      logout: "Log out"
+      setting: "Settings"
     footer:
       B: "B"
       music: "Music"
@@ -27,4 +30,25 @@ en:
       fax: "+ 01 234 567 89"
       copyright: "© 2018 Copyright"
       get_social_network: "Get connected with us on social networks!"
-
+  users:
+    login_request: "You can log in to continue"
+    invalid_action: "You can not permission access to page"
+    new:
+      create: "Sign up"
+      signup: "Create new account"
+    create:
+      success: "Create account success"
+      fail: "Create account fails. Please, recheck information"
+  sessions:
+    new:
+      login: "Log in"
+      invalid: "Information not validate"
+    form:
+      login: "Log in"
+      remember: "Remember"
+      forgot_password: "Forgot Password"
+      not_have_account: "Don't have account? "
+      signup: "Sign Up"
+  static_pages:
+    home:
+      usernotfound: "Not found user"

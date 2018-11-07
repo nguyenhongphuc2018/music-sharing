@@ -1,0 +1,24 @@
+<div class="navbar-default sidebar" role="navigation">
+  <ul class="nav" id="side-menu">
+    <li class="avatar">
+      <%= image_tag "user8", size: Settings.image_size.small %>
+    </li>
+    <li class="name"><%= @user.name %></li>
+  </ul>
+  <div class="sidebar-nav">
+    <ul class="nav" id="side-menu">
+      <li>
+        <%= link_to t(".info"), user_path(current_user) %>
+      </li>
+      <li>
+        <%= link_to t(".setting"), edit_user_path(current_user) %>
+      </li>
+      <li>
+        <a href=""><%= t ".my_song" %></a>
+      </li>
+      <li>
+        <a href=""><%= t ".my_playlist" %></a>
+      </li>
+    </ul>
+  </div>
+</div>

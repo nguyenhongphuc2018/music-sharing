@@ -2,9 +2,9 @@ class Items extends React.Component {
   render() {
     const play = "play now"
     return(
-      <div className="col-xs-2 pb-1">
+      <div className="col-xs-4 pb-1">
         <div className="view overlay">
-          <img src="http://placehold.it/190x170" className="img-fluid " alt="smaple image" />
+          <img src="assets/bh2.jpg" />
           <div className="mask flex-center rgba-cyan-strong">
             <p className="white-text font-weight-bold play"><i className="fa fa-play" /></p>
           </div>

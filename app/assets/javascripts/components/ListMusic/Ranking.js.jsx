@@ -3,7 +3,7 @@ class Ranking extends React.Component {
     return(
       <div className="col-xs-3">
         <h3 className="font-weight-bold dark-grey-text mb-3">
-          <a>Bảng xếp hạng</a>
+          <a>Ranking</a>
         </h3>
         <div className="nav-tabs-custom">
           <div className="tab-content">

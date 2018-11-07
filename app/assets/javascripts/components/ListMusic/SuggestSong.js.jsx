@@ -1,6 +1,6 @@
 class SuggestSong extends React.Component {
   render() {
-    const suggest_song = "Gợi ý cho bạn"
+    const suggest_song = "Suggest Song"
     return(
       <div className="col-lg-6 col-md-12">
         <div className="single-news mb-4">

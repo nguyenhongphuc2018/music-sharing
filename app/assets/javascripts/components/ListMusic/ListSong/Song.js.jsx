@@ -4,7 +4,7 @@ class Song extends React.Component {
       <div className="row">
         <div className="col-md-3">
           <div className="view overlay rounded z-depth-1 mb-lg-0 mb-4">
-            <img src="/assets/bh1-db59dd0777aecf7c65764a944ba8f2985bb74bcab6c4b51e2f283885838246ae.jpg" className="img-fluid" />
+            <img src="/assets/bh1.jpg" className="img-fluid" />
             <a><div className="mask rgba-white-slight waves-effect waves-light"></div></a>
           </div>
         </div>

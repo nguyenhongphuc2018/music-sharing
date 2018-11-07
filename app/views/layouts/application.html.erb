@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title><%= full_title yield(:title) %></title>
+    <title><%= full_title yield(:title) %></title>
+    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type =>  "image/png" %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track": "reload" %>
+    <%= favicon_link_tag asset_path("favicon.png"), rel: "icon", type: "image/png" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <%= render "shared/header"%>
     <div class="container">
-      <div class="col-md-12 flash">
-        <%= render "shared/flash" %>
-      </div>
+      <%= render "shared/header"%>
+      <%= render "shared/flash" %>
+      <%= yield %>
       <div class="row py-3 justify-content-md-center">
         <div class="modal col-md-12 row" id="logInModal"></div>
         <div class="modal col-md-12 row" id="signUpModal"></div>
-        <%= yield %>
       </div>
+      <%= render "shared/footer" %>
     </div>
-    <%= render "shared/footer" %>
+  </body>
 </html>

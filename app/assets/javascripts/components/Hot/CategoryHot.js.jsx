@@ -11,10 +11,10 @@ class CategoryHot extends React.Component {
               </h3>
             </div>
           </li>
-          <li><img src="https://avatar-nct.nixcdn.com/topic/thumb/2018/11/01/a/c/7/2/1541048394009_org.jpg" /></li>
-          <li><img src="https://avatar-nct.nixcdn.com/topic/thumb/2018/11/01/a/c/7/2/1541056007273_org.jpg" /></li>
-          <li><img src="https://avatar-nct.nixcdn.com/topic/thumb/2018/11/01/a/c/7/2/1541053961888_org.jpg" /></li>
-          <li><img src="https://avatar-nct.nixcdn.com/topic/thumb/2018/11/01/a/c/7/2/1541045857681_org.jpg" /></li>
+          <li><img src="assets/category_1.jpg" /></li>
+          <li><img src="assets/category_2.jpg" /></li>
+          <li><img src="assets/category_3.jpg" /></li>
+          <li><img src="assets/category_4.jpg" /></li>
         </ul>
       </div>
     )

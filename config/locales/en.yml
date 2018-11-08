@@ -38,7 +38,7 @@ en:
       create: "Sign up"
       signup: "Create new account"
     create:
-      success: "Create account success"
+      success: "Please check your email to activate your account"
       fail: "Create account fails. Please, recheck information"
     user_board:
       info: "Information"
@@ -60,6 +60,7 @@ en:
     new:
       login: "Log in"
       invalid: "Information not validate"
+      check_email_active: "Please check your email to activate your account."
     form:
       login: "Log in"
       remember: "Remember"
@@ -69,3 +70,49 @@ en:
   static_pages:
     home:
       usernotfound: "Not found user"
+  account_activations:
+    edit:
+      invalid_activation_link: "Invalid activation link."
+      account_activated: "Account activated !"
+  password_resets:
+    create:
+      email_not_found: "Email address not found"
+      instruction: "Email sent with password reset instructions."
+    update:
+      password_not_empty: "can't be empty"
+      success: "Password has been reset."
+    check_expiration:
+      password_expired: "Password reset has expired."
+    new:
+      title: "Forgot password"
+      header: "Forgot Password"
+      instruction: "You can enter your account email in this to get new
+        password."
+      send: "Reset password"
+      label_email: "Email"
+    edit:
+      title: "Reset password"
+      header: "Reset password"
+      label_password: "Password"
+      confirmation: "Password confirmation"
+      btn_update: "Update new password"
+  user_mailer:
+    password_reset:
+      header: "Password reset"
+      subject: "Reset password"
+      click_link: "To reset your password click the link below:"
+      reset_link: "Reset password"
+      content_p: "This link will expire in two hours."
+      content_p2: "If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is."
+      content_1: "To reset your password click the link below:"
+      content_2: "This link will expire in two hours.
+        If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is."
+    account_activation:
+      account_activation: "[IMusic] Active your account, please !"
+      title: "Welcome to members of IMusic !"
+      hi: "Hi %{name},"
+      content: "Welcome to the IMusic! Click on the link below to activate your
+        account."
+      link: "Active your account"

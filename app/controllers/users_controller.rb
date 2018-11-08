@@ -12,9 +12,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "users.create.success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "users.create.success"
+      redirect_to root_url
     else
       flash[:danger] = t "users.create.fail"
       redirect_to root_url
@@ -26,10 +26,12 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes user_params
       flash[:success] = t "users.edit.profile_updated"
+      redirect_to @user
     else
       flash[:danger] = t "users.edit.not_update"
+      render :edit
     end
-    render :edit
+
   end
 
   private
@@ -42,7 +44,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit :name, :email,
-      :password, :password_confirmation
+    params.require(:user).permit :name, :email, :phone, :password,
+      :password_confirmation
   end
 end

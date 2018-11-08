@@ -1,9 +1,8 @@
 class OwlCarousel extends React.Component {
   render() {
+    const img_url= "assets/album_1.jpg"
     return(
-      <div className="owl-carousel owl-theme" id="owl1">
-        <img src="assets/album_1.jpg" className="item height-30"/>
-      </div>
+        <img src={img_url} className="img-fluid height-30"/>
     )
   }
 }

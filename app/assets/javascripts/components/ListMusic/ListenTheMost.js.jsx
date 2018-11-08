@@ -1,6 +1,6 @@
 class ListenTheMost extends React.Component {
   render() {
-    const listen_the_most = "Most listening"
+    const listen_the_most = "Album most listening"
     return(
       <div className="col-lg-6 col-md-12">
         <div className="single-news mb-4">

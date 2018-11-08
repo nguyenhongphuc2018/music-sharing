@@ -5,4 +5,8 @@ validates:
     maximum: 255
   password:
     minimum: 6
+  phone:
+    maximum: 15
 remember_me_checked: 1
+image_size:
+  small: "160x120"

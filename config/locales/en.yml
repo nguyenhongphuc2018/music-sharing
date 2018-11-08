@@ -23,6 +23,7 @@ en:
       blockquote: "Bạn đã bao giờ nghĩ về cuộc sống sẽ là gì nếu không có âm nhạc? Âm nhạc là một phương tiện giúp cho chúng ta giải trí, xóa bỏ căng thẳng, là cách để chúng ta học hỏi, phát triển cảm xúc bản thân. Nếu như không có âm nhạc có lẽ cuộc sống sẽ thật yên tĩnh và tẻ nhạt"
       products: "Products"
       useful_link: "Useful links"
+      contact: "Contact"
       link: "Useful links"
       address: "Handico Office, Pham Hung Street, HaNoi, VietNam"
       email: "framgia.com"
@@ -39,6 +40,22 @@ en:
     create:
       success: "Create account success"
       fail: "Create account fails. Please, recheck information"
+    user_board:
+      info: "Information"
+      setting: "Settings"
+      my_song: "My upload"
+      my_playlist: "My playlists"
+    show:
+      title: "Information"
+      info: "Information"
+      name: "Name: %{name}"
+      email: "Email: %{email}"
+      phone: "Phone: %{phone}"
+    edit:
+      update: "Update"
+      setting: "Settings"
+      profile_updated: "Your profile have been updated success"
+      not_update: "Your profile haven't been updated"
   sessions:
     new:
       login: "Log in"

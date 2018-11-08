@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_PHONE_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
 
   has_many :image, as: :imageable
   has_many :categories
@@ -19,6 +20,8 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length:
     {minimum: Settings.validates.password.minimum}, allow_nil: true
+  validates :phone, length: {maximum: Settings.validates.phone.maximum},
+    format: {with: VALID_PHONE_REGEX}, uniqueness: {case_sensitive: false}
 
   attr_accessor :remember_token
   has_secure_password

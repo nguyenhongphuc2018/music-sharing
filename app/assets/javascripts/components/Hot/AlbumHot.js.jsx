@@ -14,6 +14,7 @@ class AlbumHot extends React.Component {
           </div>
           <div className="row">
             <Items></Items>
+            <Items></Items>
           </div>
         </div>
       </div>

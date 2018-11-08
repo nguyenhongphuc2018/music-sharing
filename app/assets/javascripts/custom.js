@@ -5,6 +5,9 @@ $(document).ready(function() {
     event.preventDefault();
   });
   $('form').on('click', '.add_fields', function(event) {
+    return event.preventDefault();
+  });
+  return $('form').on('click', '.add_fields', function(event) {
     var regexp, time;
     time = new Date().getTime();
     regexp = new RegExp($(this).data('id'), 'g');

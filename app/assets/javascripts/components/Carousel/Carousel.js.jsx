@@ -10,6 +10,7 @@ class Carousel extends React.Component {
         </div>
         <div className="item">
           <img src="assets/carousel_2.jpg" className="item height-40"/>
+          <img src="assets/carousel_2.jpg" className="item height-40" />
           <div className="carousel-caption">
           </div>
         </div>

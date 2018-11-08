@@ -62,3 +62,35 @@ end
   Album.create! name: name,
     user_id: user_id
 end
+
+# #create songs
+# name_songs = [ "dunderpatrullen-singularity", 
+#           "nobuo-uematsu-the-promise", 
+#           "lol-bit-rush",
+#           "lol-worlds-collide",
+#           "hatsune-miku-secret-police",
+#           "hatsune-miku-senbonzakura",
+#           "hatsune-miku-talent-shredder",
+#           "one-punch-man-opening-1",
+#         ]
+# name_songs.each do |name_song|
+#   name = name_song
+#   song_url = "https://cdn.zekken.rocks/mp3/#{name_song}.mp3"
+#   user_id = 1
+#   category_id = 1
+#   view = 1856
+#   Song.create(name: name, song_url: song_url, user_id: user_id, category_id: category_id, view: view)
+# end
+
+# #create album
+# 20.times do 
+#   name = FFaker::Music.album
+#   user_id = 1
+#   Album.create!(name: name, user_id: user_id)
+# end
+
+# 8.times do |n|
+#   song_id = n + 1
+#   album_id = n + 5
+#   AlbumSong.create!(song_id: song_id, album_id: album_id)
+# end

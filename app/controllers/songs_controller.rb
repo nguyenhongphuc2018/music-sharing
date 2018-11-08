@@ -2,7 +2,10 @@ class SongsController < ApplicationController
   before_action :logged_in_user, except: :index
   before_action :load_category, only: %i(new edit update)
 
-  def index; end
+  def index
+    @songs = Song.get_song
+    render json:@songs
+  end
 
   def new
     @song = Song.new

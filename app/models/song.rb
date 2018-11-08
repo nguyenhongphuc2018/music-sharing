@@ -19,4 +19,7 @@ class Song < ApplicationRecord
 
   accepts_nested_attributes_for :authors, :singers,
     reject_if: proc {|attributes| attributes["name"].blank?}
+  scope :get_song, (lambda do 
+    all.order("created_at asc").limit(Settings.get_song.limit)
+  end)
 end

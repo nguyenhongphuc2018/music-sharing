@@ -21,7 +21,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length:
     {minimum: Settings.validates.password.minimum}, allow_nil: true
   validates :phone, length: {maximum: Settings.validates.phone.maximum},
-    format: {with: VALID_PHONE_REGEX}, allow_nil: true
+     allow_nil: true
 
   attr_accessor :remember_token, :activation_token, :reset_token
   has_secure_password

@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         log_in user
         params[:session][:remember_me] == Settings.remember_me_checked ?
           remember(user) : forget(user)
-        redirect_to root_path
+        user.admin? ? redirect_to(admin_url) : redirect_to(user)
       else
         flash[:warning] = t "sessions.new.check_email_active"
         redirect_to root_path

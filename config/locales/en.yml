@@ -2,6 +2,28 @@ en:
   layouts:
     application:
       base_title: "IMusic"
+    admin:
+      index:
+        base_title: "IMusic"
+      header:
+        B: "B"
+        music: "Music"
+        home: "Home"
+        base_title: "IMusic"
+        dashbroad: "Dashbroad"
+        search: "Search..."
+        login: "Login"
+        logout: "Logout"
+        user_profile: "User Profile"
+        link: "Link"
+  admin:
+    warning: "You are admin to access the page."
+    dashboards:
+      index:
+        dashboard: "Dashboard"
+        number: "10"
+        link: "New comments"
+        view: "View Details"
   shared:
     header:
       B: "B"

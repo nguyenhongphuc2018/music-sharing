@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   delete "logout", to: "sessions#destroy"
   get "signup", to: "users#new"
   post "signup", to: "users#create"
+  get "/songs/search", to: "songs#search", as: "search_path"
+  get "/songs/filter", to: "songs#filter"
   resources :users, except: :destroy
   resources :password_resets, except: %i(index show destroy)
   resources :account_activations, only: :edit

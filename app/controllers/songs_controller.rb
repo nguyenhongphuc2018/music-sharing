@@ -1,8 +1,9 @@
 class SongsController < ApplicationController
   before_action :locked_account?, only: %i(create new)
   before_action :logged_in_user, except: %i(index show)
-  before_action :load_song, except: %i(index create new)
+  before_action :load_song, only: %i(destroy edit update show)
   before_action :load_category, only: %i(new edit update)
+  before_action :load_author, :load_category, :load_singer, only: %i(search filter)
 
   def index
     @songs = Song.get_song
@@ -59,6 +60,19 @@ class SongsController < ApplicationController
     redirect_to my_songs_url
   end
 
+  def search 
+    @songs = Song.search(params[:q]).page(params[:page]).per Settings.record_per_page
+  end
+
+  def filter
+    filtering_params(params).each do |key, value|
+      @songs = Song.public_send(key, value) if value.present?
+    end
+    render json:{
+      search_result: render_to_string(@songs)
+    }, status: :ok
+  end
+
   private
 
   def load_song
@@ -66,6 +80,10 @@ class SongsController < ApplicationController
     return if @song
     flash[:danger] = t ".no_found_song"
     redirect_to root_url
+  end
+  
+  def filtering_params params
+    params.slice(:filter_category_id, :filter_author_id, :filter_singer_id, :sort_name)
   end
 
   def song_params
@@ -75,6 +93,14 @@ class SongsController < ApplicationController
   end
 
   def load_category
-    @category_name = Category.by_name_cate
+    @category_name = Category._name
+  end
+
+  def load_author 
+    @authors = Author._name
+  end
+
+  def load_singer
+    @singers = Singer._name
   end
 end

@@ -9,4 +9,6 @@ class Singer < ApplicationRecord
     attributes['image_url'].blank?}
   scope :load_data, ->{includes(:songs).select :id, :name, :info, :created_at}
   scope :latest,->{order created_at: :desc}
+  validates :name, presence: true, length: {maximum: Settings.validates.name.maximum}
+  scope :_name, -> {order :name}
 end

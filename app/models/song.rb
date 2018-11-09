@@ -1,4 +1,5 @@
 class Song < ApplicationRecord
+  include Filterable
   belongs_to :user
   belongs_to :category
   has_many :lyrics, dependent: :destroy
@@ -11,6 +12,7 @@ class Song < ApplicationRecord
   has_many :comments
   has_many :likes
   scope :order_at, -> {order created_at: :desc}
+  delegate :name, to: :category, prefix: true
 
   mount_uploader :song_url, AudioUploader
 
@@ -23,4 +25,31 @@ class Song < ApplicationRecord
   scope :get_song, (lambda do
     all.order("created_at asc").limit(Settings.get_song.limit)
   end)
+  scope :_name, -> {order :name}
+  
+  class << self
+    def search search
+      unless search.present?
+        Song.all
+      else
+        where("songs.name LIKE '%#{search}%' ")
+      end
+    end
+  
+    def filter_category_id search
+      Song.where(category_id: search) if search.present?
+    end
+  
+    def filter_author_id search
+      Song.joins(:authors).where("authors.id = ?", search) if search.present?
+    end
+  
+    def filter_singer_id search
+      Song.joins(:singers).where("singers.id = ?", search) if search.present?
+    end
+
+    def sort_name search
+      Song.all.order(name: :desc) if search.present?
+    end
+  end
 end

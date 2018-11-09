@@ -5,5 +5,5 @@ class Category < ApplicationRecord
   validates :info, presence: true
   scope :select_fields, ->{includes(:songs).select :id, :name, :info, :created_at}
   scope :by_lastest,->{order created_at: :desc}
-  scope :by_name_cate, -> {order :name}
+  scope :_name, -> {order :name}
 end

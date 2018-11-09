@@ -24,3 +24,4 @@ truncate:
   name_album: 12
 users:
   show: 10
+record_per_page: 4  

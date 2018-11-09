@@ -1,7 +1,7 @@
 class AlbumHot extends React.Component {
   render() {
-    const album_hot = "Album hot"
-    const time_line = "2 days ago"
+    const album_hot = "Single hot"
+    const time_line = " 2 days ago"
     return(
       <div className="col-xs-9">
         <div className="timeline-item">
@@ -12,10 +12,7 @@ class AlbumHot extends React.Component {
               <a>{album_hot}</a>
             </h3>
           </div>
-          <div className="row">
-            <Items></Items>
-            <Items></Items>
-          </div>
+          <Items></Items>
         </div>
       </div>
     )

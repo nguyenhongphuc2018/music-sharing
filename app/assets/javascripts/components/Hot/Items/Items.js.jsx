@@ -1,22 +1,35 @@
 class Items extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: []
+    }
+    this.fetchData = this.fetchData.bind(this)
+  }  
+  
+  componentDidMount() {
+    this.fetchData()
+  }
+
+  fetchData() {
+    fetch("http://localhost:3000/songs")
+    .then(response => response.json())
+    .then(data => this.setState({
+      data
+    }))
+    .catch(err => console.log("fails: " + err))
+  }
+
+
   render() {
-    const play = "play now"
+    const {data} = this.state
+    const single_song = data.map(song =>{
+      // console.log(song);
+     return <SingleSong song={song} key={song.id}></SingleSong>
+    })
     return(
-      <div className="col-xs-4 pb-1">
-        <div className="view overlay">
-          <img src="assets/bh2.jpg" />
-          <div className="mask flex-center rgba-cyan-strong">
-            <p className="white-text font-weight-bold play"><i className="fa fa-play" /></p>
-          </div>
-        </div>
-        <div className="m-0">
-          <h4 className="mb-0">
-            <a href="#" className="black-text">Today i miss you</a>
-          </h4>
-          <small>
-            <a href="#">Taylor Swift</a>
-          </small>
-        </div>
+      <div className="row">
+        {single_song}  
       </div>
     )
   }

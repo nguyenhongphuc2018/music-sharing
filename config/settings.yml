@@ -10,3 +10,4 @@ validates:
 remember_me_checked: 1
 image_size:
   small: "160x120"
+expired_time: 2

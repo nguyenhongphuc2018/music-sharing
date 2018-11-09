@@ -21,11 +21,12 @@ class User < ApplicationRecord
   validates :password, presence: true, length:
     {minimum: Settings.validates.password.minimum}, allow_nil: true
   validates :phone, length: {maximum: Settings.validates.phone.maximum},
-    format: {with: VALID_PHONE_REGEX}, uniqueness: {case_sensitive: false}
+    format: {with: VALID_PHONE_REGEX}, allow_nil: true
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token, :reset_token
   has_secure_password
   before_save :downcase_email
+  before_create :create_activation_digest
 
   def authenticated? attribute, token
     digest = send "#{attribute}_digest"
@@ -42,10 +43,33 @@ class User < ApplicationRecord
     update_attributes remember_digest: User.digest(remember_token)
   end
 
+  def activate
+    update_columns activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+      reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.expired_time.hours.ago
+  end
+
   class << self
     def digest string
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
+      cost = ActiveModel::SecurePassword.min_cost ?
+        BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
     end
 
     def new_token
@@ -57,5 +81,10 @@ class User < ApplicationRecord
 
   def downcase_email
     email.downcase!
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest activation_token
   end
 end

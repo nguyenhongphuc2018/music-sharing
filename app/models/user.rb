@@ -1,4 +1,6 @@
+require "./lib/recommendation.rb"
 class User < ApplicationRecord
+  include Recommendation
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_PHONE_REGEX = /(\+84|0)\d{9,10}/
   enum role: [:locked, :user, :admin]

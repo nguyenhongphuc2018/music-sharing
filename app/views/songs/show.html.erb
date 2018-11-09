@@ -16,12 +16,8 @@
           <p><strong><%= t ".lyric" %></strong>
             <%= render "lyrics/lyrics" %>
           </p>
-          <button type="button" class="btn btn-default btn-xs">
-            <i class="fa fa-thumbs-o-down"></i> <%= t ".dislike"%>
-          </button>
-          <button type="button" class="btn btn-default btn-xs">
-            <i class="fa fa-thumbs-o-up"></i> <%= t ".like"%>
-          </button>
+          <%= react_component("LikeButton", {user_id: @user_id, song_id: @song.id, is_liked: @is_liked}) %>
+          <span>
           <button type="button" class="btn btn-default btn-xs">
             <i class="fa fa-flag"></i> <%= t ".report"%>
           </button>
@@ -50,9 +46,6 @@
               </div>
             </div>
           </div>
-          <span class="pull-right text-muted">
-            <%= t ".likes" %> - <%= t ".comments" %>
-          </span>
         </div>
         <div class="box-footer box-comments">
           <div class="box-comment">

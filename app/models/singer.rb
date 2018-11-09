@@ -4,4 +4,5 @@ class Singer < ApplicationRecord
   has_many :singer_songs
   has_many :songs, through: :singer_songs
   validates :name, presence: true, length: {maximum: Settings.validates.name.maximum}
+  scope :_name, -> {order :name}
 end

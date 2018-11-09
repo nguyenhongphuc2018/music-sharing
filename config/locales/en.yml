@@ -93,6 +93,7 @@ en:
       B: "B"
       music: "Music"
       songs: "Songs"
+      placeholder: "Search"
       playlists: "Play Lists"
       search: "Search"
       upload: "Upload"
@@ -224,6 +225,9 @@ en:
         account."
       link: "Active your account"
   songs:
+    search:
+      enter_the_key_word: "Enter the key word"
+      instruction: "You can filter results after selecting type filter by enter the value in the next text box"
     show:
       lyric_here: "Enter lyric here..."
       lyrics_contribution: "Lyrics contribution"

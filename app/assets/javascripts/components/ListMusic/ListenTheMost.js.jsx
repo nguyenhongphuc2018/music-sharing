@@ -8,7 +8,6 @@ class ListenTheMost extends React.Component {
             <a>{listen_the_most}</a>
           </h3>
         </div>
-        <ListSong></ListSong>
       </div>
     )
   }

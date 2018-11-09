@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-3">
+      <div class="box-body">
+        <ul>
+          <li>
+            <h3> <i class="fa fa-sort"></i> <%= t ".sort_by" %></h3>
+            <label class="container-checkbox">
+              <small><%= t ".name_desc" %><small>
+              <input type="checkbox" id="sort_name">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container-checkbox">
+              <small><%= t ".newest" %><small>
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <h3><i class="fa fa-filter"></i> <%= t ".filter" %></h3>
+            <div class="form-group">
+              <select class="form-control select2 select2-hidden-accessible width-max" id="select_category">
+                <option selected="selected" disabled><%= t ".category" %></option>
+                <%= render "category_option" %>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control select2 select2-hidden-accessible width-max" id="select_author">
+                <option selected="selected" disabled><%= t ".author" %></option>
+                <%= render "author_option" %>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control select2 select2-hidden-accessible width-max" id="select_singer">
+                <option selected="selected" disabled><%= t ".singer" %></option>
+               <%= render "singer_option" %>
+              </select>
+            </div>
+          </li>
+          <li class="text-center">
+            <a class="btn btn-app bg-navy" id="clear_selected">
+              <i class="fa fa-remove"></i> <%= t ".remove_filter" %>
+            </a>
+          </li>
+        </ul> 
+        
+      </div>
+    </div> 
+    <div class="col-md-9">
+      <div class="box box-primary">
+        <div class="box-header">
+          <div class="row">
+            <div class="col-md-2">
+              <h3 class="box-title"><%= t".list_results" %></h3>
+            </div>
+            <div class="col-md-4">
+              <p class="bg-olive p-half text-center">
+                <%= t ".instruction" %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-blue mb-0">
+                <input type="text" class="form-control border-radius-none mb-0" 
+                  id="keyword_filter" placeholder="<%= t ".enter_the_key_word" %>">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-body no-padding">
+          <table class="table table-borderless fs-2" id="list_song">
+              <%= render partial: "song", collection: @songs, as: :song %>
+          </table>
+          
+        </div>
+      </div>
+      <div class="text-center fs-2" id="paginate">
+        <%= paginate @songs %>
+      </div>
+    </div>
+  </div>
+</div>

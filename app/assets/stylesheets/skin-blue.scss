@@ -200,6 +200,7 @@
 .mr-4{margin-right: 1rem;}
 .m-0{margin: 0rem;}
 .mb-0{margin-bottom: 0rem;}
+.mb-1{margin-bottom: 1rem;}
 .p-0{padding:0rem!important;}
 .pl-0{padding-left: 0rem!important}
 .pl-1{padding-left: 1rem!important;}
@@ -688,6 +689,26 @@ audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
 
       background-color: cornflowerblue;
   }
+}
+
+.body {
+    height: 50vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(77deg, #1e5799 0%,#7db9e8 100%);
+    width: 100%;
+}
+.body-1 {
+    background: linear-gradient(77deg, #607d8b 0%,#7db9e8 100%);
+}
+.body-2 {
+    background: linear-gradient(77deg, #845188 0%,#7db9e8 100%);
+}
+.body-3 {
+    background: linear-gradient(77deg, #1e5799 0%,#7db9e8 100%);
+}
+.body-4 {
+    background: linear-gradient(77deg, #1e5799 0%,#7db9e8 100%);
 }
 /*responsive*/
 @media (max-width: 576px) and (max-width: 768px) {

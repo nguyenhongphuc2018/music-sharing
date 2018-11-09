@@ -117,6 +117,13 @@ en:
         account."
       link: "Active your account"
   songs:
+    show:
+      lyric: "Lời bài hát:"
+      dislike: "Dislike"
+      like: "Like"
+      report: "Report"
+      likes: "Likes"
+      comments: "Comments"
     new:
       title_upload: "Upload song"
       headerupload: "Đăng tải bài hát"

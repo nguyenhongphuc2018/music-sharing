@@ -32,6 +32,16 @@
   info = FFaker::Music.artist
   Category.create!(user_id: user_id, name: name, info: info)
 end
+#   User.create!(email: email, name: name, phone: phone, password: password)
+# end
+
+# #create category
+# 20.times do |n|
+#   user_id = n + 1
+#   name = FFaker::Music.genre
+#   info = FFaker::Music.artist
+#   Category.create!(user_id: user_id, name: name, info: info)
+# end
 
 # #create songs
 # name_songs = [ "dunderpatrullen-singularity", 

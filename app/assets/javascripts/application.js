@@ -13,7 +13,6 @@
 //= require jquery3
 //= require bootstrap.min
 //= require rails-ujs
-//= require turbolinks
 //= require adminlte.min
 //= require master
 //= require react

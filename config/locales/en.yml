@@ -54,6 +54,15 @@ en:
       copyright: "© 2018 Copyright"
       get_social_network: "Get connected with us on social networks!"
   users:
+    list_my_song:
+      delete: "Delete"
+      you_sure: "You definitely want to delete this song!!"
+      edit: "Edit"
+    my_song:
+      notice: "Notice:"
+      notice_content: "You have not uploaded any song yet."
+      my_song: "My songs"
+      headermysong: "List my song"
     login_request: "You can log in to continue"
     invalid_action: "You can not permission access to page"
     new:
@@ -139,31 +148,42 @@ en:
         account."
       link: "Active your account"
   songs:
-    show:
-      lyric: "Lời bài hát:"
-      dislike: "Dislike"
-      like: "Like"
-      report: "Report"
-      likes: "Likes"
-      comments: "Comments"
-    new:
-      title_upload: "Upload song"
-      headerupload: "Đăng tải bài hát"
-      namesong: "Tên bài hát, video:"
-      placeholder_song: "Nhập tên bài hát..."
-      namesinger: "Ca sĩ, diễn viên trình diễn:"
-      nameauthor: "Tác giả bài hát:"
-      imagename: "Ảnh nền"
-      filesong: "File bài hát"
-      category_select: "Thể loại"
-      upload: "Upload"
-      add: "Add"
-    singer_fields:
-      placeholder_singer: "Nhập tên ca sĩ, diễn viên..."
-      remove: "Remove"
-    author_fields:
-      placeholder_author: "Nhập tên tác giả..."
-      remove: "Remove"
-    create:
-      add_song_successfully: "Đăng tải bài hát thành công!!"
-      add_song_fail: "Đăng tải bài hát thất bại!!"
+      new:
+        title_upload: "Upload song"
+        headerupload: "Upload new song"
+        namesong: "Name song, video:"
+        placeholder_song: "Enter name song..."
+        namesinger: "Singers, performers:"
+        nameauthor: "Author:"
+        imagename: "Avatar:"
+        filesong: "File song:"
+        category_select: "Category:"
+        upload: "Upload"
+        add: "Add"
+      edit:
+        title_edit_song: "Edit my song"
+        headeredit: "Edit uploaded songs"
+        namesong: "Name song, video:"
+        placeholder_song: "Enter new name song..."
+        namesinger: "Singers, performers:"
+        nameauthor: "Author:"
+        imagename: "Avatar:"
+        filesong: "File song:"
+        category_select: "Category:"
+        upload: "Save change!!"
+        add: "Add"
+      singer_fields:
+        placeholder_singer: "Enter name singers, performers..."
+        remove: "Remove"
+      author_fields:
+        placeholder_author: "Enter name author..."
+        remove: "Remove"
+      create:
+        add_song_successfully: "Upload song successfully!!"
+        add_song_fail: "Upload song failed!!"
+      update:
+        song_updated: "Update song successfully!!"
+        song_update_failed: "Update song failed!!"
+      destroy:
+        delete_successfully: "Delete song successfully!!"
+        add_song_fail: "Delete song failed!!"

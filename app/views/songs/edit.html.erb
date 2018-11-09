@@ -1,8 +1,8 @@
-<% provide :title, t(".title_upload") %>
+<% provide :title, t(".title_edit_song") %>
 <div class="container">
   <div class="row">
     <div id="css_upload">
-      <h2><i class="fa fa-pencil"></i> <%= t ".headerupload"%></h2>
+      <h2><i class="fa fa-edit"> </i> <%= t ".headeredit"%></h2>
       <div class="row_upload">
         <div class="col-50">
           <%= form_for @song do |f| %>
@@ -29,14 +29,16 @@
           </div>
         </div>
         <div class="col-50">
-          <i class="fa far fa-image"></i> <%= t ".imagename" %>
+          <i class="fa far fa-image  "></i> <%= t ".imagename" %>
           <div class="add_author">
+            <img src="/assets/img_lights.jpg">
             <input type="file"><br>
           </div>
-          <i class="fa far fa-image"></i> <%= t ".filesong" %>
+          <i class="fa far fa-image  "></i> <%= t ".filesong" %>
           <span class="present_icon">*</span>
           <div class="add_author">
-            <%= f.file_field :song_url, required: true %><br>
+            <%= audio_tag @song.song_url.url, controls: true %>
+            <%= f.file_field :song_url %><br>
           </div>
           <i class="fa fa-th-list"></i> <%= t ".category_select" %>
           <div class="add_author">

@@ -16,14 +16,49 @@ en:
         logout: "Logout"
         user_profile: "User Profile"
         link: "Link"
+        category: "Categories"
   admin:
     warning: "You are admin to access the page."
+    edit: "Edit"
+    delete: "Delete"
     dashboards:
       index:
         dashboard: "Dashboard"
         number: "10"
         link: "New comments"
         view: "View Details"
+    categories:
+      index:
+        title: "Manage Categories"
+        name: "Category Name"
+        info: "Imformation"
+        quantity_songs: "Quantity Songs"
+        action: "Action"
+        search: "Search"
+        create: "Create"
+      category:
+        confirm: "You are sure delete this category?"
+      destroy:
+        has_songs: "Category has many songs. You can't delete this category"
+        success: "Delete category success."
+        warning: "Delete category fails."
+        not_found: "Not found category."
+      edit:
+        edit_category: "Edit Category"
+        save_change: "Save changes"
+      update:
+        category_update: "Update category information success!"
+      new:
+        title: "Create Category"
+        create: "Create"
+      form:
+        name: "Name"
+        info: "Information"
+      create:
+        add_success: "Create category %{name} success."
+        create_fail: "Create category fail! Please check imformation."
+      load_category:
+        not_found: "Not found category with id is %{id}."
   shared:
     header:
       B: "B"
@@ -160,6 +195,26 @@ en:
         category_select: "Category:"
         upload: "Upload"
         add: "Add"
+      show:
+        format: "Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s.When an unknown printer took a galley
+          of type and scrambled it to make a type specimen book.It has survived
+          not only five centuries, but also the leap into electronic.
+          Typesetting, remaining essentially unchanged. It was popularised
+          in the 1960s with the release of"
+        placeholder_comments: "Press enter to post comment"
+        comments: "1 Comments"
+        likes: "150 Likes"
+        dislike: "Dislike"
+        like: "Like"
+        lyric: "Lyric"
+        report: "Report"
+        ranking: "Ranking"
+        tags: "Tags name"
+        tag1: "Dunderpatrullen-Singularity"
+        tag2: "Dunderpatrullen"
+        tag3: "Singularity"
       edit:
         title_edit_song: "Edit my song"
         headeredit: "Edit uploaded songs"

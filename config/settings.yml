@@ -13,3 +13,4 @@ image_size:
 expired_time: 2
 get_song:
   limit: 10
+show: 5

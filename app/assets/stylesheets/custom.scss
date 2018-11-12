@@ -1,6 +1,30 @@
 @import "color";
 
-/*css upload*/
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin-bottom: 30px;
+  }
+}
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
 
 #css_upload {padding: 1em; background-color: $bg-css-upload;}
 .add_author img {width: 200px; height: auto;}

@@ -2,6 +2,7 @@ class SongsController < ApplicationController
   before_action :logged_in_user, except: :index
   before_action :load_category, only: %i(new edit update)
 
+  before_action :load_song, only: :show
   def index
     @songs = Song.get_song
     render json:@songs
@@ -26,6 +27,8 @@ class SongsController < ApplicationController
     redirect_to root_url
   end
 
+  def show; end
+
   private
 
   def song_params
@@ -36,5 +39,9 @@ class SongsController < ApplicationController
 
   def load_category
     @category_name = Category.by_name_cate
+  end
+
+  def load_song
+    @song = Song.find_by id: params[:id]
   end
 end

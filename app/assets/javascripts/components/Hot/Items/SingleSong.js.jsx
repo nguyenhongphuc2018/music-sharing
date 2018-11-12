@@ -24,6 +24,7 @@ class SingleSong extends React.Component {
   render() {
     const {isShow} = this.state
     const {song} = this.props
+    let song_path = "songs/".concat(song.id.toString())
     let bass = [...Array(38)].map(i => {
       return <Bass key={i}></Bass>
     })
@@ -61,7 +62,7 @@ class SingleSong extends React.Component {
         </div>
         <div className="m-0">
           <h4 className="mb-0">
-            <a href="#" className="black-text">{song.name}</a>
+            <a href={song_path} className="black-text">{song.name}</a>
           </h4>
           <small>
             <a href="#">View: {song.view}</a>

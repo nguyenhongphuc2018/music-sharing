@@ -19,7 +19,6 @@ gem "mini_magick", "4.7.0"
 gem "puma", "~> 3.7"
 gem "react-rails"
 gem "sass-rails", "~> 5.0"
-gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "ffaker"
 

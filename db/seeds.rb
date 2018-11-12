@@ -44,8 +44,8 @@ end
 # end
 
 # #create songs
-# name_songs = [ "dunderpatrullen-singularity", 
-#           "nobuo-uematsu-the-promise", 
+# name_songs = [ "dunderpatrullen-singularity",
+#           "nobuo-uematsu-the-promise",
 #           "lol-bit-rush",
 #           "lol-worlds-collide",
 #           "hatsune-miku-secret-police",
@@ -63,7 +63,7 @@ end
 # end
 
 # #create album
-# 20.times do 
+# 20.times do
 #   name = FFaker::Music.album
 #   user_id = 1
 #   Album.create!(name: name, user_id: user_id)

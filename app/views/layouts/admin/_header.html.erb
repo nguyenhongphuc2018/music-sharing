@@ -1,0 +1,86 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">
+        <b><%= t ".B" %></b><%= t ".music" %>
+      </a>
+      <button type="button" class="navbar-toggle collapsed"
+        data-toggle="collapse" data-target="#navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-user fa-fw"></i> <%= current_user.name %>
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+          <li>
+            <%= link_to current_user  do %>
+              <i class="fa fa-user fa-fw"></i> <%= t ".user_profile" %>
+            <% end %>
+            <li class="divider"></li>
+            <%= link_to logout_path, method: :delete  do %>
+              <i class="fa fa-sign-out fa-fw"></i> <%= t ".logout" %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <ul class="nav" id="side-menu">
+        <li class="sidebar-search">
+          <div class="input-group custom-search-form">
+            <%= text_field_tag "search", nil, placeholder: t(".search"),
+              class: "form-control" %>
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </li>
+        <li>
+          <%= link_to admin_path do %>
+            <i class="fa fa-dashboard fa-fw"></i> <%= t ".home" %>
+          <% end %>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-bar-chart-o fa-fw"></i> <%= t ".link" %>
+              <span class="fa arrow"></span>
+          </a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="#"><%= t ".link" %></a>
+            </li>
+            <li>
+              <a href="#"><%= t ".link" %></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-sitemap fa-fw"></i> <%= t ".link" %>
+            <span class="fa arrow"></span>
+          </a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="#"><%= t ".link" %>
+                <span class="fa arrow"></span>
+              </a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a href="#"><%= t ".link" %></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

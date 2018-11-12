@@ -10,12 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
 //= require rails-ujs
-//= require adminlte.min
-//= require master
-//= require react
-//= require react_ujs
-//= require components
-//= require custom
-//= require_tree .
+//= require turbolinks
+//= require jquery
+//= require bootstrap
+//= require turbolinks
+//= require admin/metisMenu.min
+//= require admin/sb-admin

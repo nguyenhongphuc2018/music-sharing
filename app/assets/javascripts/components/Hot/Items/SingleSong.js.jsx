@@ -1,5 +1,5 @@
 class SingleSong extends React.Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -7,7 +7,7 @@ class SingleSong extends React.Component {
     }
     this.onclick = this.onclick.bind(this)
     this.removeButton = this.removeButton.bind(this)
-  } 
+  }
 
   onclick() {
     this.setState({
@@ -44,7 +44,7 @@ class SingleSong extends React.Component {
             </div>
             <div className="col-md-12">{bass}</div>
           </div>
-        </div> 
+        </div>
       )
     } else {
       play = (<i className="fa fa-play-circle fs-10" />)

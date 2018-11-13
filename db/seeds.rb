@@ -25,12 +25,24 @@
 #   User.create!(email: email, name: name, phone: phone, password: password, activated: activated)
 # end
 
+10.times do |n|
+  name = FFaker::Name.name
+  email = FFaker::Internet.email
+  User.create! name: name,
+  email: email,
+  password: "111111",
+  activated: true,
+  activated_at: Time.zone.now
+end
+
 # #create category
 20.times do |n|
-  user_id = n + 1
   name = FFaker::Music.genre
-  info = FFaker::Music.artist
-  Category.create!(user_id: user_id, name: name, info: info)
+  info = "info"
+  user_id = rand 1..10
+  Category.create! name: name,
+    info: info,
+    user_id: user_id
 end
 #   User.create!(email: email, name: name, phone: phone, password: password)
 # end

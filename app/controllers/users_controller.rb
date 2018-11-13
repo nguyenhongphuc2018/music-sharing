@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: %i(new create)
-  before_action :find_user, except: %i(new create)
+  before_action :find_user, except: %i(new create my_song)
 
   def new
     @user = User.new
     respond_to {|format| format.js}
+  end
+
+  def my_song
+    @user = current_user
+    @songs = Song.all
   end
 
   def show; end

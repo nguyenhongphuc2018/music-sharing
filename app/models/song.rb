@@ -3,11 +3,11 @@ class Song < ApplicationRecord
   belongs_to :category
   has_one :lyric
   has_many :album_songs
-  has_many :albums, through: :album_songs
+  has_many :albums, through: :album_songs, dependent: :destroy
   has_many :author_songs
-  has_many :authors, through: :author_songs
+  has_many :authors, through: :author_songs, dependent: :destroy
   has_many :singer_songs
-  has_many :singers, through: :singer_songs
+  has_many :singers, through: :singer_songs, dependent: :destroy
   has_many :comments
   has_many :likes
 

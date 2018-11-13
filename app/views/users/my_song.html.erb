@@ -1,0 +1,23 @@
+<% provide :title, t(".my_song") %>
+<div class="container">
+  <div class="col-md-3">
+    <%= render "users/user_board"%>
+  </div>
+  <div class="col-md-6">
+    <div class="container">
+      <h2><i class="fa fa-list"></i> <%= t ".headermysong" %></h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+          <% if @user.songs.blank? %>
+            <div class="notice-mysong notice-mysong-warning">
+              <strong><%= t(".notice") %></strong> <%= t(".notice_content") %>
+            </div>
+          <% else %>
+            <%= render "list_my_song" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

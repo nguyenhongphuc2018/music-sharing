@@ -14,7 +14,9 @@
         <%= link_to t(".setting"), edit_user_path(current_user) %>
       </li>
       <li>
-        <a href=""><%= t ".my_song" %></a>
+        <%= link_to users_my_song_path, class: "dropdown-toggle" do %>
+          <%= t ".my_song" %> <i class="fa fa-music"></i>
+        <% end %>
       </li>
       <li>
         <a href=""><%= t ".my_playlist" %></a>

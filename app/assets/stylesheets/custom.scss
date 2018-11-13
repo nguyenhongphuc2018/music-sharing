@@ -1,54 +1,69 @@
+@import "color";
+
 /*css upload*/
 
-#css_upload{padding: 1em; background-color: #D8D8D8}
-.add_author a:hover{
-  color: purple;
-  text-decoration: none;
-}
-.input, select, textarea{
+#css_upload {padding: 1em; background-color: $bg-css-upload;}
+.add_author img {width: 200px; height: auto;}
+.present_icon {color: $present-icon;}
+.add_author a:hover {color: $a-hover; text-decoration: none;}
+.input, select, textarea {
   width: 70%;
   height: 40px;
   padding: 0 5px;
   border-radius: 10px;
 }
 .row_upload {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 -16px;
 }
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-  padding: 0 16px;
-}
+.col-50 {-ms-flex: 50%; flex: 50%; padding: 0 16px;}
 input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid $input-bd;
   border-radius: 10px;
 }
-.btn_upload{
-  background-color: #4CAF50;
-  color: white;
+.btn_upload {
+  background-color: $bg-btn-upload;
+  color: $btn-upload;
   padding: 12px;
   margin: 10px 0;
   border: none;
-  width: 100%;
+  width: 50%;
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
 }
-.btn_upload:hover {
-  background-color: #45a049;
-}
+.btn_upload:hover {background-color: $bg-btn-upload-hover;}
 @media (max-width: 800px) {
-  .row_upload {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
+  .row_upload {flex-direction: column-reverse;}
+  .col-25 {margin-bottom: 20px;}
 }
+
+/*css my song*/
+
+.notice-mysong {
+  padding: 15px;
+  background-color: $bg-notice-mysong;
+  border-left: 6px solid $notice-mysong;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+  box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-mysong-warning {border-color: $notice-warning; font-size: 16px;}
+.notice-mysong-warning > strong {color: $notice-warning;}
+
+/*my list song*/
+
+.img_my_song {max-width: 110%; height: auto;}
+.clearfix {clear:both;}
+.rowcolor {background-color: $bg-rowcolor;}
+.padall {padding:10px;}
+.icon {font-size:23px; color: $list-song-icon;}
+.icon_edit {font-size:16px; color: $list-song-icon-edit;}
+.icon_delete {font-size:16px; color: $list-song-icon-delete;}

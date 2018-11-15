@@ -19,3 +19,5 @@ page:
   my_song: 10
 truncate:
   name_album: 12
+users:
+  show: 10

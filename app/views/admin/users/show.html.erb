@@ -1,0 +1,41 @@
+<div class="row">
+  <p><%= t ".infomations" %></p>
+  <div class="col-md-6">
+    <p><%= t ".name", name: @user.name %></p>
+    <p><%= t ".email", email: @user.email %></p>
+    <p><%= t ".phone", phone: @user.phone %></p>
+  </div>
+</div>
+<div class="row">
+  <p><%= t ".songs" %></p>
+  <% unless @songs.blank? %>
+    <% @songs.each do |song|%>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <%= image_tag "user8", size: Settings.image_size %>
+          <%= audio_tag song.song_url.url, controls: true, class:"audio" %>
+          <p>
+            <%= song.name %> -
+            <% song.singers.each do |singer| %>
+              <%= singer.name %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="col-md-3">
+      <p><strong><%= t ".notice" %></strong> <%= t ".notice_song" %></p>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <p><%= t ".albums" %></p>
+  <% unless @albums.blank? %>
+    <%= render "admin/albums/album" %>
+  <% else %>
+    <div class="col-md-3">
+      <p><strong><%= t ".notice" %></strong> <%= t ".notice_album" %></p>
+    </div>
+  <% end %>
+</div>

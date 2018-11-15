@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :locked_account?, only: %i(create new)
   before_action :logged_in_user, except: %i(index show)
   before_action :load_song, except: %i(index create new)
   before_action :load_category, only: %i(new edit update)

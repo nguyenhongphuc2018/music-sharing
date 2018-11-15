@@ -1,0 +1,8 @@
+<% @albums.each do |album|%>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <%= image_tag "user8", size: Settings.image_size %>
+      <p><%= album.name %></p>
+    </div>
+  </div>
+<% end %>

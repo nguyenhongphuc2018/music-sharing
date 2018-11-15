@@ -1,34 +1,30 @@
-10.times do |n|
-  name = FFaker::Name.name
-  email = FFaker::Internet.email
-  User.create! name: name,
-  email: email,
-  password: "111111",
-  activated: true,
-  activated_at: Time.zone.now
-end
+#create admin
+User.create! name: "Admin", email: "admin@bmusic.com", phone: "0376542134",
+  role: 2, password: "123123", password_confirmation: "123123",
+  activated: true, activated_at: Time.zone.now
 
-# #create category
+#create user
 20.times do |n|
-  name = FFaker::Music.genre
-  info = "info"
-  user_id = rand 1..10
-  Category.create! name: name,
-    info: info,
-    user_id: user_id
+  email = FFaker::InternetSE.unique.free_email
+  name  = FFaker::InternetSE.unique.user_name
+  phone = "037365421" << "#{n}"
+  role = 1
+  password = "123123"
+  activated = true
+  activated_at = Time.zone.now
+  User.create!(email: email, name: name, phone: phone, password: password,
+    activated: activated, activated_at: activated_at, role: role)
 end
-#   User.create!(email: email, name: name, phone: phone, password: password)
-# end
 
-# #create category
-# 20.times do |n|
-#   user_id = n + 1
-#   name = FFaker::Music.genre
-#   info = FFaker::Music.artist
-#   Category.create!(user_id: user_id, name: name, info: info)
-# end
+#create category
+20.times do |n|
+  user_id = n + 1
+  name = FFaker::Music.unique.genre
+  info = "info"
+  Category.create!(user_id: user_id, name: name, info: info)
+end
 
-# #create songs
+#create songs
 # name_songs = [ "dunderpatrullen-singularity",
 #           "nobuo-uematsu-the-promise",
 #           "lol-bit-rush",

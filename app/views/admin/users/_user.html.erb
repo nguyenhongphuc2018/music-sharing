@@ -1,0 +1,22 @@
+<tr>
+  <td><%= link_to user.email, admin_user_path(user) %></td>
+  <td><%= user.name %></td>
+  <td><%= user.phone %></td>
+  <td>
+  <% unless user.admin? %>
+    <% if user.locked? %>
+      <%= form_for [:admin, user] do |f| %>
+      <%= hidden_field_tag :role, :user %>
+      <%= f.submit t(".unlock"), class: "submit-btn btn-success",
+        data: {confirm: t(".you_sure")} %>
+      <% end %>
+    <% else %>
+      <%= form_for [:admin, user] do |f| %>
+        <%= hidden_field_tag :role, :locked %>
+        <%= f.submit t(".lock"), class: "submit-btn btn-danger",
+          data: {confirm: t(".you_sure")} %>
+      <% end %>
+    <% end %>
+  <% end %>
+  </td>
+</tr>

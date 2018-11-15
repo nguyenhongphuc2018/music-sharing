@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
     redirect_to root_url unless current_user? @user
   end
 
+  def locked_account?
+    if current_user&.locked?
+      flash[:danger] = t "users.locked"
+      redirect_to root_path
+    end
+  end
+
   private
 
   def logged_in_user

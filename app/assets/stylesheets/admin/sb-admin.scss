@@ -3,6 +3,27 @@
 @import '../color';
 @import "adminlte";
 
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin-bottom: 30px;
+  }
+}
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
 body {
   background-color: $color_desert_storm_approx;
 }

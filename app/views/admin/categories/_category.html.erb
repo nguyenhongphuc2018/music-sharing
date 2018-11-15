@@ -1,0 +1,8 @@
+<tr>
+  <td><%= category.name %></td>
+  <td><%= category.info %></td>
+  <td><%= category.songs.count %></td>
+  <td><%= link_to t("admin.edit"), edit_admin_category_path(category) %></td>
+  <td><%= link_to t("admin.delete"), admin_category_path(category),
+    method: :delete, data: {confirm: t(".confirm")} %></td>
+</tr>

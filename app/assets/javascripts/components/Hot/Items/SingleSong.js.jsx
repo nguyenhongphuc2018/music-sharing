@@ -65,7 +65,7 @@ class SingleSong extends React.Component {
             <a href={song_path} className="black-text">{song.name}</a>
           </h4>
           <small>
-            <a href="#">View: {song.view}</a>
+            <a href={song_path}>View: {song.view}</a>
           </small>
           <div className="footer navbar-fixed-bottom">
             {showSong}

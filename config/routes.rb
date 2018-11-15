@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :songs
   namespace :admin do
     get "/", to: "dashboards#index"
+    resources :categories
   end
 end

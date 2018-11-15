@@ -6,6 +6,7 @@ gem "rails", "~> 5.2.1"
 
 gem "bcrypt", "3.1.12"
 gem "bootsnap", require: false
+gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "3.3.7"
 gem "carrierwave", "1.2.2"
 gem "carrierwave-audio"
@@ -15,13 +16,12 @@ gem "ffaker"
 gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.2"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3", ">= 4.3.3"
+gem "kaminari"
 gem "mini_magick", "4.7.0"
 gem "puma", "~> 3.7"
 gem "react-rails"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
-gem "ffaker"
-
 
 source "https://rails-assets.org/" do
   gem "rails-assets-adminlte"

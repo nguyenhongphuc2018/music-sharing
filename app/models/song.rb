@@ -10,6 +10,7 @@ class Song < ApplicationRecord
   has_many :singers, through: :singer_songs, dependent: :destroy
   has_many :comments
   has_many :likes
+  scope :order_at, -> {order created_at: :desc}
 
   mount_uploader :song_url, AudioUploader
 
@@ -19,7 +20,7 @@ class Song < ApplicationRecord
 
   accepts_nested_attributes_for :authors, :singers,
     reject_if: proc {|attributes| attributes["name"].blank?}
-  scope :get_song, (lambda do 
+  scope :get_song, (lambda do
     all.order("created_at asc").limit(Settings.get_song.limit)
   end)
 end

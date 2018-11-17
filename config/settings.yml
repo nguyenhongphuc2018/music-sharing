@@ -17,5 +17,6 @@ show: 5
 page:
   my_album: 10
   my_song: 10
+  show_lyric: 1
 truncate:
   name_album: 12

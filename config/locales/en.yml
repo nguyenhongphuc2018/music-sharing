@@ -195,19 +195,14 @@ en:
       link: "Active your account"
   songs:
     show:
-      format: "Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard
-        dummy text ever since the 1500s.When an unknown printer took a galley
-        of type and scrambled it to make a type specimen book.It has survived
-        not only five centuries, but also the leap into electronic.
-        Typesetting, remaining essentially unchanged. It was popularised
-        in the 1960s with the release of"
+      lyric_here: "Enter lyric here..."
+      lyrics_contribution: "Lyrics contribution"
       placeholder_comments: "Press enter to post comment"
-      comments: "1 Comments"
+      comments: " 1 Comments"
       likes: "150 Likes"
       dislike: "Dislike"
       like: "Like"
-      lyric: "Lyric"
+      lyric: "Lyric:"
       report: "Report"
       ranking: "Ranking"
       tags: "Tags name"
@@ -269,3 +264,8 @@ en:
     update:
       update_album_successfully: "Update album successfully!!"
       update_album_fail: "Update album failed!!!"
+  lyrics:
+    create:
+      create_successfully: "Create lyric successfully. Wait admin accept!"
+    lyrics:
+      see_more: "v See more..."

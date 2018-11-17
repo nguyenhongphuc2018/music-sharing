@@ -1,0 +1,12 @@
+<% if @song.lyrics.accepted.blank? %>
+  <p>No lyrics</p>
+<% else %>
+  <% @lyrics.each do |lyric| %>
+    <div id="lyric_close">
+      <%= simple_format lyric.content %>
+    </div>
+    <a href="#head_lyric" onclick="coLyric()">
+      <div id="coLyric"><%= t ".see_more" %></div>
+    </a>
+  <% end %>
+<% end %>

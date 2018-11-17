@@ -12,3 +12,15 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+
+// see more and compact lyric
+function coLyric() {
+  var x = document.getElementById("lyric_close");
+  if (x.className === "lyric_open") {
+    document.getElementById("coLyric").innerHTML = "v See more...";
+    x.className = "closesd";
+  } else {
+    x.className = "lyric_open";
+    document.getElementById("coLyric").innerHTML = "^ Compact";
+  }
+}

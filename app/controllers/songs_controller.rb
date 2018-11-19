@@ -8,7 +8,10 @@ class SongsController < ApplicationController
     render json:@songs
   end
 
-  def show; end
+  def show
+    @lyrics = @song.lyrics.accepted.page(params[:page])
+      .per Settings.page.show_lyric
+  end
 
   def new
     @song = Song.new

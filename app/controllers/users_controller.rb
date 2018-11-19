@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def my_album
     @album = Album.new
-    @albums = Album.includes(:songs).order_name.all
+    @albums = Album.includes(:songs).order_name
   end
 
   def show; end

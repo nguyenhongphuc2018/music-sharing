@@ -152,3 +152,13 @@ hr {border: 1px solid $list-album-hr;}
   color: $img-boxs-a-hover-li;
 }
 .newalbum {float: right;}
+
+/*view lyric*/
+
+#lyric_close {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lyric_open {width: 100%; height: auto !important;}

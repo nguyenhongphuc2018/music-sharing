@@ -17,6 +17,7 @@ en:
         user_profile: "User Profile"
         link: "Link"
         category: "Categories"
+        user: "Users"
   admin:
     warning: "You are admin to access the page."
     edit: "Edit"
@@ -27,6 +28,34 @@ en:
         number: "10"
         link: "New comments"
         view: "View Details"
+    users:
+      invalid: "Invalid"
+      user:
+        lock: "Lock"
+        unlock: "Unlock"
+        you_sure: "Are you sure ?"
+      update:
+        locked: "You has locked %{name} !"
+        user: "%{name} has unlocked"
+        save_admin: "You cannot change admin account's role."
+      index:
+        title: "Manage Users"
+        avatar: "Avatar"
+        email: "Email"
+        name: "Name"
+        phone: "Phone number"
+        action: "Lock"
+        search: "Search"
+      show:
+        infomations: "Informations"
+        name: "Name: %{name}"
+        email: "Email: %{email}"
+        phone: "Phone: %{phone}"
+        songs: "Songs"
+        albums: "Albums"
+        notice: "Notice:"
+        notice_song: "User not have song"
+        notice_album: "User not have album"
     categories:
       index:
         title: "Manage Categories"
@@ -111,6 +140,7 @@ en:
       headermysong: "List my song"
     login_request: "You can log in to continue"
     invalid_action: "You can not permission access to page"
+    locked: "Your account has locked because you has been reported."
     new:
       create: "Sign up"
       signup: "Create new account"

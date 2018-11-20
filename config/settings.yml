@@ -20,3 +20,5 @@ page:
   show_lyric: 1
 truncate:
   name_album: 12
+users:
+  show: 10

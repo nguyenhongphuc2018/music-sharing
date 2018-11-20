@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  VALID_PHONE_REGEX = /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/
-  enum role: [:user, :admin]
+  VALID_PHONE_REGEX = /(\+84|0)\d{9,10}/
+  enum role: [:locked, :user, :admin]
   has_many :image, as: :imageable
   has_many :categories
   has_many :songs
@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
   has_many :reports
-
+  scope :by_role, ->{order role: :desc}
+  scope :select_fields, ->{select :id, :name, :email, :phone, :created_at, :role}
   validates :name, presence: true, length:
     {maximum: Settings.validates.name.maximum}
   validates :email, presence: true, length:
@@ -21,7 +22,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length:
     {minimum: Settings.validates.password.minimum}, allow_nil: true
   validates :phone, length: {maximum: Settings.validates.phone.maximum},
-     allow_nil: true
+    format: {with: VALID_PHONE_REGEX}, allow_nil: true
 
   attr_accessor :remember_token, :activation_token, :reset_token
   has_secure_password

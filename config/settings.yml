@@ -8,8 +8,10 @@ validates:
   phone:
     maximum: 15
 remember_me_checked: 1
+default_avatar: "user8"
 image_size:
   small: "160x120"
+  smallest: "80x80"
 expired_time: 2
 get_song:
   limit: 10

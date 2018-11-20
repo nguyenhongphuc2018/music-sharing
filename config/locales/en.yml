@@ -18,6 +18,8 @@ en:
         link: "Link"
         category: "Categories"
         user: "Users"
+        author: "Authors"
+        singer: "Singers"
   admin:
     warning: "You are admin to access the page."
     edit: "Edit"
@@ -88,6 +90,70 @@ en:
         create_fail: "Create category fail! Please check imformation."
       load_category:
         not_found: "Not found category with id is %{id}."
+    authors:
+      index:
+        title: "Manage Authors"
+        quantity_songs: "Total songs"
+        avatar: "Avatar"
+        name: "Name"
+        info: "Imformation"
+        action: "Action"
+        search: "Search"
+        create: "Create"
+      author:
+        confirm: "You sure?"
+      destroy:
+        success: "Delete author success."
+        not_found: "Not found author."
+        has_songs: "Author has many songs. You can't delete this author"
+      edit:
+        edit_author: "Edit Author"
+        save_change: "Save changes"
+      update:
+        author_update: "Update author information success!"
+      new:
+        title: "Create Author"
+        create: "Create"
+      form:
+        name: "Name"
+        info: "Information"
+      create:
+        add_success: "Create author %{name} success."
+        create_fail: "Create author fail! Please check imformation."
+      load_author:
+        not_found: "Not found author with id is %{id}."
+    singers:
+      index:
+        title: "Manage Singers"
+        quantity_songs: "Total Songs"
+        avatar: "Avatar"
+        name: "Name"
+        info: "Imformation"
+        action: "Action"
+        search: "Search"
+        create: "Create"
+      singer:
+        confirm: "You sure?"
+      destroy:
+        success: "Delete singer success."
+        not_found: "Not found singer."
+        has_songs: "Singer has many songs. You can't delete this singer"
+      edit:
+        edit_singer: "Edit Singer"
+        save_change: "Save changes"
+      update:
+        singer_update: "Update singer information success!"
+      new:
+        title: "Create Singer"
+        create: "Create"
+      form:
+        name: "Name"
+        info: "Information"
+      create:
+        add_success: "Create singer %{name} success."
+        create_fail: "Create singer fail! Please check imformation."
+      load_singer:
+        not_found: "Not found singer with id is %{id}."
   shared:
     header:
       B: "B"

@@ -162,3 +162,30 @@ hr {border: 1px solid $list-album-hr;}
   text-overflow: ellipsis;
 }
 .lyric_open {width: 100%; height: auto !important;}
+
+/*comments*/
+
+.action-comment {display: none;}
+.action-comment2:hover {
+  .action-comment {display: block;}
+  .action-comment3 {background-color: #D8D8D8;}
+}
+.add-comment {background-color: #D8D8D8; height: 70px; border-radius: 10px;}
+.new_comment {margin-top: 5px;}
+.box-widget hr {border: 0.3px solid #858585}
+.input-add {height: 40px; font-size: 18px;}
+.img-add {width: 40px !important; height: 40px !important;}
+.img-push input[type=text] {width: 99%;}
+.img-sm + .img-push {margin-left: 55px;}
+.bg-color {background-color: gray}
+.input-edit input[type=text] {
+  border: 1px solid #FACC2E;
+  height: 40px;
+  font-size: 14px;
+}
+.edit-comment-fm img {
+  width: 40px !important;
+    height: 40px !important;
+    margin-left: 10px;
+}
+.trun-comment p {width: 90%; height: auto !important; padding: 0; margin: 0;}

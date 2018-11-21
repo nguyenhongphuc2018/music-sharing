@@ -88,6 +88,80 @@ en:
         create_fail: "Create category fail! Please check imformation."
       load_category:
         not_found: "Not found category with id is %{id}."
+    lyrics:
+      index:
+        title: "Manage Lyrics"
+        filter: "Filter"
+        content: "Content"
+        commenter: "Commenter"
+        song: "Song"
+        created: "created_at"
+        status: "Status"
+        action: "Action"
+      lyrics:
+        show: "See details"
+        delete: "Delete"
+        sure: "You definitely want to delete this lyric!!"
+        unaccept: "Unaccept"
+        accept: "Accept"
+      accept:
+        accept_successfully: "Accept successfully"
+        accept_failed: "Accept failed"
+      unaccept:
+        unaccept_successfully: "Unaccept successfully"
+        unaccept_failed: "Unaccept successfully"
+      destroy:
+        delete_successfully: "Delete successfully"
+        delete_failed: "Delete failed"
+    reports:
+      index:
+        title: "Check reports"
+        reason: "Reason"
+        sender: "Sender"
+        song: "Song"
+        created: "created_at"
+        action: "Action"
+      reports:
+        show: "See Details"
+        delete: "Delete"
+        sure: "You definitely want to delete this report!!"
+      destroy:
+        delete_successfully: "Delete successfully!!"
+        delete_failed: "Delete failed"
+    comments:
+      index:
+        title: "Check Comments"
+        content: "Comments"
+        commenter: "commenter"
+        song: "Songs"
+        created: "created_at"
+        action: "Action"
+      comments:
+        show: "See Details"
+        delete: "Delete"
+        sure: "You definitely want to delete this comment!!"
+      destroy:
+        delete_successfully: "Delete successfully!!"
+        delete_failed: "Delete failed"
+    songs:
+      index:
+        title: "Manage Songs"
+        name: "Songs"
+        uploader: Uploader
+        view: "Listening"
+        comment: "Comments"
+        reports: "Reports"
+        lyrics: "Lyrics"
+        category: "Category"
+        created: "Created"
+      songs:
+        show: "See details"
+        delete: "Delete"
+        sure: "You definitely want to delete this song!!"
+      destroy:
+        delete_successfully: "Delete successfully!!"
+        delete_failed: "Delete failed"
+  lyric: "Lyric:"
   shared:
     header:
       B: "B"
@@ -243,6 +317,7 @@ en:
       tag1: "Dunderpatrullen-Singularity"
       tag2: "Dunderpatrullen"
       tag3: "Singularity"
+      no_found_song: "The song does not exist!!"
     new:
       title_upload: "Upload song"
       headerupload: "Upload new song"
@@ -303,3 +378,13 @@ en:
       create_successfully: "Create lyric successfully. Wait admin accept!"
     lyrics:
       see_more: "v See more..."
+  comments:
+    destroy:
+      delete_successfully: "Delete comment successfully!!"
+      delete_fail: "Delete comment failed!!"
+      must_current_user: "You are not the creator of this comment, delete failed!!"
+    update:
+      updated: "Update comment successfully!!"
+      update_failed: "Update comment failed!!!"
+  report_successfully: "Report successfully!!. Wait admin check it."
+  report_failed: "Report failed"

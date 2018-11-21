@@ -224,8 +224,9 @@ ul{list-style: none;}
 .black-text {color: #000}
 .blue-light-1-text  {color: #0689ba}
 .gray-text {color: #fe5196}
-.fs-10{font-size: 10rem;}
-.fs-2{font-size: 1.75rem;}
+.fs-10{font-size: 10rem!important;}
+.fs-2{font-size: 1.75rem!important;}
+.fs-5{font-size: 5rem!important;}
 .text-primary {color: #4285f4!important;}
 .text-light-red {color: #ea0000!important;}
 .font-weight-bold{font-weight: bold;}

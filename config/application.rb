@@ -6,5 +6,6 @@ module MusicShared
     config.load_defaults 5.2
     config.time_zone = "Hanoi"
     config.active_record.default_timezone = :local
+    config.active_record.observers = :video_observer
   end
 end

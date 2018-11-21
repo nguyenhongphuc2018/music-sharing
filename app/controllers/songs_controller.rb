@@ -7,14 +7,17 @@ class SongsController < ApplicationController
 
   def index
     @songs = Song.get_song
-    render json:@songs
+    render json:@songs.to_json(include: [:authors, :singers])
   end
 
   def show
-    @lyrics = @song.lyrics.accepted.page(params[:page])
-      .per Settings.page.show_lyric
     @user_id = current_user.id
     @is_liked = @song.is_liked @user_id
+    @song.increase_view
+    @lyric =  @song.lyrics.build
+    @report = @song.reports.build
+    @lyrics = @song.lyrics.accepted.page(params[:page]).per Settings.page.show_lyric
+    @comments = @song.comments.includes(:song).order_time.page(params[:page]).per 10
   end
   
   def recommend_song
@@ -79,6 +82,11 @@ class SongsController < ApplicationController
     render json:{
       search_result: render_to_string(@songs)
     }, status: :ok
+  end
+
+  def chart_songs
+    @songs = Song.order(view: :desc).limit(5)
+    render json:@songs
   end
 
   private

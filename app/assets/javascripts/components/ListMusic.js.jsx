@@ -5,7 +5,6 @@ class ListMusic extends React.Component {
         <div className="row">
           <div className="col-xs-9">
             <div className="row">
-              <ListenTheMost></ListenTheMost>
               <SuggestSong></SuggestSong>
             </div>
           </div>

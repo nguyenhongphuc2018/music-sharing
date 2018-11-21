@@ -1,5 +1,8 @@
 class ListSong extends React.Component {
   render() {
+    let id = Math.floor(Math.random()*10)
+    let path = "https://picsum.photos/190/170?image=105".concat(id.toString())
+    let avatar = (<img src={path} className="img-fluid " alt="smaple image" />)
     const {song} = this.props
     let song_path = "songs/".concat(song.id.toString())
     let list_author = song.authors.map(author => {
@@ -10,7 +13,7 @@ class ListSong extends React.Component {
         <div className="row">
           <div className="col-md-3">
             <div className="view overlay rounded z-depth-1 mb-lg-0 mb-4">
-              <img src="/assets/bh1.jpg" className="img-fluid" />
+              {avatar}
               <a><div className="mask rgba-white-slight waves-effect waves-light"></div></a>
             </div>
           </div>

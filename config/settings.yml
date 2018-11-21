@@ -12,7 +12,7 @@ image_size:
   small: "160x120"
 expired_time: 2
 get_song:
-  limit: 10
+  limit: 12
 show: 5
 page:
   my_album: 10

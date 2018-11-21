@@ -29,7 +29,7 @@ class SingleSong extends React.Component {
       return <Bass key={i}></Bass>
     })
     if (isShow) {
-      play = (<i className="fa fa-stop fs-10" />)
+      play = (<i className="fa fa-stop fs-5" />)
       showSong = (
         <div className="container-audio">
           <div className="row">
@@ -47,20 +47,25 @@ class SingleSong extends React.Component {
         </div>
       )
     } else {
-      play = (<i className="fa fa-play-circle fs-10" />)
+      play = (<i className="fa fa-play-circle fs-5" />)
       showSong = null
     }
     let id = Math.floor(Math.random()*10)
-    let path = "https://picsum.photos/190/170?image=106".concat(id.toString())
+    let path = "https://picsum.photos/g/190/170?image=105".concat(id.toString())
     let avatar = (<img src={path} className="img-fluid " alt="smaple image" />)
+    author = song.authors.map(author => {
+      return <a href={song_path}>Author: {author.name}</a>
+    });
+    singer = song.singers.map(singer => {
+      return <a href={song_path}>Singer: {singer.name}</a>
+    })
     return(
-      <div className="col-xs-2 pb-1">
-        <div className="view overlay" onClick={this.onclick}>
+      <div className="col-xs-2 pb-2">
+        <div className="view overlay hoverable" onClick={this.onclick}>
           {avatar}
           <div className="mask flex-center rgba-cyan-strong">
             <p className="white-text font-weight-bold play" >
               {play}
-              
             </p>
           </div>
         </div>
@@ -70,7 +75,8 @@ class SingleSong extends React.Component {
 
           </h4>
           <small>
-            <a href={song_path}>View: {song.view}</a>
+            {author}<br/>
+            {singer}
           </small>
           <div className="footer navbar-fixed-bottom">
             {showSong}

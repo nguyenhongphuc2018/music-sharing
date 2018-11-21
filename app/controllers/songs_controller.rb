@@ -10,8 +10,11 @@ class SongsController < ApplicationController
   end
 
   def show
-    @lyrics = @song.lyrics.accepted.page(params[:page])
-      .per Settings.page.show_lyric
+    @song.increase_view
+    @lyric =  @song.lyrics.build
+    @report = @song.reports.build
+    @lyrics = @song.lyrics.accepted.page(params[:page]).per Settings.page.show_lyric
+    @comments = @song.comments.includes(:song).order_time.page(params[:page]).per 10
   end
 
   def new

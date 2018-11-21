@@ -14,7 +14,6 @@ User.create! name: "Admin", email: "admin@bmusic.com", phone: "0376542134",
   activated_at = Time.zone.now
   User.create!(email: email, name: name, phone: phone, password: password,
     activated: activated, activated_at: activated_at, role: role)
-end
 
 #create category
 20.times do |n|
@@ -40,8 +39,7 @@ end
 #   user_id = 1
 #   category_id = 1
 #   view = 1856
-#   Song.create(name: name, song_url: song_url, user_id: user_id, category_id: category_id, view: view)
-# end
+#   Song.create(name: name, song_url: song_url, us
 
 # #create album
 # 20.times do

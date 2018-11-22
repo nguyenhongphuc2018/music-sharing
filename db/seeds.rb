@@ -4,17 +4,17 @@
 #   activated: true, activated_at: Time.zone.now
 
 #create user
-1.times do |n|
-  email = FFaker::InternetSE.unique.free_email
-  name  = FFaker::InternetSE.unique.user_name
-  phone = "037365421" << "#{n}"
-  role = 1
-  password = "123123"
-  activated = true
-  activated_at = Time.zone.now
-  User.create!(email: email, name: name, phone: phone, password: password,
-    activated: activated, activated_at: activated_at, role: role)
-end
+# 1.times do |n|
+#   email = FFaker::InternetSE.unique.free_email
+#   name  = FFaker::InternetSE.unique.user_name
+#   phone = "037365421" << "#{n}"
+#   role = 1
+#   password = "123123"
+#   activated = true
+#   activated_at = Time.zone.now
+#   User.create!(email: email, name: name, phone: phone, password: password,
+#     activated: activated, activated_at: activated_at, role: role)
+# end
 
 #create category
 # 20.times do |n|

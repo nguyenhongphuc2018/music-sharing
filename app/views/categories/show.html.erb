@@ -1,0 +1,20 @@
+<% if @songs.present? %>
+  <div class="container">
+    <section class="content-header pb-2 pl-0">
+      <h1>Tags: <%= @category.name %></h1>
+      <ol class="breadcrumb">
+        <li>
+          <i class="fa fa-dashboard"></i> 
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>Categories</li>
+        <li class="active"><%= @category.name %></li>
+      </ol>
+    </section>
+    <div class="row">
+      <%= render partial: "song", collection: @songs, as: :song %>
+    </div>
+  </div>
+<% else %>
+  <%= render "shared/500_page" %>
+<% end %>

@@ -14,7 +14,22 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#"><%= t ".songs" %>
             <span class="sr-only">(current)</span></a></li>
-          <li><a href="#"><%= t ".playlists" %></a></li>
+          <li><%= link_to 'Add video now!', new_video_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Tuyển Tập Theo Thể Loại <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <% $category_groups.each_with_index do |category_group, index| %>
+                <li class="width-50 hoverable">
+                  <% category_group.each do |category| %>
+                    <button OnClick="location.href='<%= category_path(category.id) %>'" 
+                      class="btn bg-<%= index+1 %> margin width-10 pl-0 pr-0 white-text border-radius-5">
+                      <%= category.name %>
+                    </button>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
         </ul>
         <%= form_with url: search_path_url, method: :get, local: true,
         class:"navbar-form navbar-left input-group" do |form| %>

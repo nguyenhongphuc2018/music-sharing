@@ -15,6 +15,7 @@ class Song < ApplicationRecord
   has_many :reports, dependent: :destroy
   scope :order_at, -> {order created_at: :desc}
   delegate :name, to: :category, prefix: true
+  delegate :image_url, to: :image, prefix: true
   mount_uploader :song_url, AudioUploader
   validates :name, presence: true, length:
     {maximum: Settings.validates.name.maximum}

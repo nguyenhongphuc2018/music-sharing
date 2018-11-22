@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
   include ApplicationHelper
+  $category_groups = Category.all.in_groups_of(4, false)
 
   def correct_user
     @user = User.find_by id: params[:id]

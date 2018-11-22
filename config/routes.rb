@@ -18,11 +18,13 @@ Rails.application.routes.draw do
   resources :password_resets, except: %i(index show destroy)
   resources :account_activations, only: :edit
   resources :albums
+  resources :categories, only: :show
   resources :songs do
     resources :lyrics
     resources :comments
     resources :reports
   end
+  resources :videos
   resources :likes
   namespace :admin do
     get "/", to: "dashboards#index"

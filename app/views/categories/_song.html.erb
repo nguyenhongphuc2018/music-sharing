@@ -1,0 +1,24 @@
+<%= link_to song do %>
+  <div class="col-xs-2 pb-1 height-20">
+    <div class="view overlay">
+      <%= image_tag song.image_image_url.url, class: "img-fluid height-100" %>
+      <div class="mask flex-center rgba-red-strong"></div>
+    </div>
+    <div class="m-0">
+    <h4 class="mb-0">
+      <%=  song.name %>
+    </h4>
+    <small>
+      Author: 
+      <% if song.authors.present? %>
+        <% song.authors.each do |author| %>
+          <%= author.name %>
+        <% end %>
+      <% else %>
+        N/A
+      <% end %> 
+    </small>
+    <div class="footer navbar-fixed-bottom"></div>
+    </div>
+  </div>
+<% end %>

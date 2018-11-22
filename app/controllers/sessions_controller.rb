@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:danger] = t "sessions.new.invalid"
-      render :new
+      redirect_to root_path
     end
   end
 

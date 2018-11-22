@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/songs/search", to: "songs#search", as: "search_path"
   get "/songs/filter", to: "songs#filter"
   get "songs/recommend", to: "songs#recommend_song"
+  get "songs/chart", to: "songs#chart_songs"
   resources :users, except: :destroy
   resources :password_resets, except: %i(index show destroy)
   resources :account_activations, only: :edit

@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   before_action :logged_in_user, except: %i(index show)
-  before_action :load_song, except: %i(index create new)
+  before_action :load_song, only: %i(destroy show edit update)
   before_action :load_category, only: %i(new edit update search filter)
   before_action :load_author, :load_singer, only: %i(search filter)
 
@@ -17,6 +17,7 @@ class SongsController < ApplicationController
     @lyrics = @song.lyrics.accepted.page(params[:page]).per Settings.page.show_lyric
     @comments = @song.comments.includes(:song).order_time.page(params[:page]).per 10
     @albums = Album.all
+    @user_id = current_user.id
     @is_liked = @song.is_liked @user_id
   end
 
@@ -80,6 +81,11 @@ class SongsController < ApplicationController
     render json:{
       search_result: render_to_string(@songs)
     }, status: :ok
+  end
+
+  def chart_songs
+    @songs = Song.order(view: :desc).limit(5)
+    render json:@songs
   end
 
   private

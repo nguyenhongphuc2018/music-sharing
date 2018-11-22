@@ -1,7 +1,7 @@
 <tr class="hoverable">
   <td>
     <%= link_to song do %>
-      <%= image_tag  "music", class: "img-fluid height-10" %>
+      <%= image_tag get_avatar(song), class: "img-fluid height-10 width-10" %>
     <% end %>
   </td>
   <td>
@@ -10,14 +10,14 @@
     <i class="fa fa-microphone"></i> &nbsp;<%= t ".singer" %>:
     <%= render partial: "singer", collection: song.singers, as: :singer %>
     <br>
-    <i class="fa fa-th"></i> <%= t ".category" %>: 
+    <i class="fa fa-th"></i> <%= t ".category" %>:
     <small class="blue-light-1-text">
       <%= song.category_name %>
-    </small> 
+    </small>
   </td>
   <%= render  partial: "author", collection: song.authors, as: :author %>
   <td class="line-height-10 gray-text">
-    <i class="fa fa-user"></i> 
+    <i class="fa fa-user"></i>
     <%= song.user.name %>
   </td>
 </tr>

@@ -1,8 +1,10 @@
+require "./lib/recommendation.rb"
 class User < ApplicationRecord
+  include Recommendation
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_PHONE_REGEX = /(\+84|0)\d{9,10}/
   enum role: [:locked, :user, :admin]
-  has_many :image, as: :imageable
+  has_one :image, as: :imageable, dependent: :destroy
   has_many :categories
   has_many :songs
   has_many :albums
@@ -23,6 +25,9 @@ class User < ApplicationRecord
     {minimum: Settings.validates.password.minimum}, allow_nil: true
   validates :phone, length: {maximum: Settings.validates.phone.maximum},
     format: {with: VALID_PHONE_REGEX}, allow_nil: true
+
+  accepts_nested_attributes_for :image,
+    reject_if: proc {|attributes| attributes["image_url"].blank?}
 
   attr_accessor :remember_token, :activation_token, :reset_token
   has_secure_password

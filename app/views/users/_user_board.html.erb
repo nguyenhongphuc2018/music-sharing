@@ -1,7 +1,7 @@
 <div class="navbar-default sidebar" role="navigation">
   <ul class="nav" id="side-menu">
     <li class="avatar">
-      <%= image_tag "user8", size: Settings.image_size.small %>
+      <%= image_tag get_avatar(current_user), size: Settings.image_size.small %>
     </li>
     <li class="name"><%= current_user.name %></li>
   </ul>

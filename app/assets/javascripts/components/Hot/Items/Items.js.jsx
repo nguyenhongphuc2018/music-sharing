@@ -24,7 +24,6 @@ class Items extends React.Component {
   render() {
     const {data} = this.state
     const single_song = data.map(song =>{
-      // console.log(song);
      return <SingleSong song={song} key={song.id}></SingleSong>
     })
     return(

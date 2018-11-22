@@ -1,0 +1,497 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        name: "Tên hiển thị"
+        email: "Địa chỉ email"
+        phone: "Số điện thoại"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+      image:
+        image_url: "Hình đại diện"
+      category:
+        name: "Tên thể loại"
+        info: "Mô tả"
+      author:
+        name: "Tên tác giả"
+        info: "Thông tin"
+      singer:
+        name: "Tên ca sĩ"
+        info: "Thông tin"
+  errors:
+    messages:
+      blank: "không được để trống"
+      empty: "không được để trống"
+      invalid: "không hợp lệ"
+      too_short:
+        other: hơi ngắn (ít nhất là %{count} kí tự)
+  layouts:
+    application:
+      base_title: "IMusic"
+    admin:
+      index:
+        base_title: "IMusic"
+      header:
+        B: "B"
+        music: "Music"
+        home: "Trang chủ"
+        base_title: "IMusic"
+        dashboard: "Trang quản trị"
+        search: "Tìm kiếm..."
+        login: "Đăng nhập"
+        logout: "Đăng xuất"
+        user_profile: "Trang cá nhân"
+        link: "Link"
+        user: "Người dùng"
+        category: "Thể loại"
+        songs: "Bài hát"
+        singer: "Ca sĩ"
+        author: "Tác giả"
+        lyrics: "Lời bài hát"
+        comments: "Bình luận"
+        reports: "Báo cáo"
+  admin:
+    warning: "Bạn không phải là admin nên không thể truy cập."
+    edit: "Chỉnh sửa"
+    delete: "Xóa"
+    dashboards:
+      index:
+        dashboard: "Trang quản trị"
+        users: "Người dùng"
+        categories: "Thể loại"
+        authors: "Tác giả"
+        singers: "Ca sĩ"
+        lyrics: "Lời bài hát"
+        comments: "Bình luận"
+        songs: "Bài hát"
+        reports: "Báo cáo"
+        view: "Xem chi tiết"
+    users:
+      invalid: "Invalid"
+      user:
+        lock: "Khóa"
+        unlock: "Mở khóa"
+        you_sure: "Bạn có chắc chắn muốn khóa tài khoản này không?"
+      update:
+        locked: "Bạn đã khóa tài khoản của thành viên %{name} !"
+        save_admin: "Bạn không thể thay đổi quyền của tài khoản quản trị viên."
+      index:
+        title: "Quản lý người dùng"
+        avatar: "Ảnh avatar"
+        email: "Địa chỉ mail"
+        name: "Tên người dùng"
+        phone: "Số điện thoại"
+        total_song: "Số bài hát"
+        total_album: "Số album"
+        action: "Hành động"
+        search: "Tìm kiếm"
+      show:
+        infomations: "Thông tin tài khoản"
+        name: "Họ và tên: %{name}"
+        email: "Email: %{email}"
+        phone: "Điện thoại: %{phone}"
+        songs: "Bài hát"
+        albums: "Albums"
+        notice: "Thông báo:"
+        notice_song: "Người dùng chưa tải lên bài hát nào!"
+        notice_album: "Người dùng chưa tạo album nào!"
+    categories:
+      index:
+        title: "Quản lý thể loại"
+        id: "ID"
+        name: "Tên thể loại"
+        info: "Mô tả"
+        quantity_songs: "Số bài hát"
+        action: "Hành động"
+        search: "Tìm kiếm"
+        create: "Tạo mới"
+      category:
+        confirm: "Bạn có chắc chắn xóa thể loại này không?"
+      destroy:
+        has_songs: "Có bài hát thuộc thể loại này. Bạn không thể xóa thể loại này."
+        success: "Xóa thể loại thành công."
+        not_found: "Không tìm thấy thể loại."
+      edit:
+        edit_category: "Chỉnh sửa thông tin thể loại"
+        save_change: "Lưu thay đổi"
+      update:
+        category_update: "Chỉnh sửa thông tin thể loại thành công!"
+      new:
+        title: "Tạo thể loại mới"
+        create: "Tạo"
+      form:
+        name: "Tên thể loại"
+        info: "Mô tả"
+      create:
+        add_success: "Tạo thể loại %{name} thành công."
+        create_fail: "Tạo thể loại mới có lỗi xảy ra. Bạn vui lòng kiểm tra lại thông tin."
+      load_category:
+        not_found: "Không tìm thấy thể loại có mã số %{id}."
+    authors:
+      index:
+        title: "Quản lý tác giả"
+        quantity_songs: "Số bài hát"
+        name: "Tên tác giả"
+        info: "Thông tin"
+        action: "Hành động"
+        search: "Tìm kiếm"
+        create: "Tạo mới"
+      author:
+        confirm: "Bạn có chắc chắn xóa tác giả này không?"
+      destroy:
+        has_songs: "Có bài hát do tác giả này sáng tác. Bạn không thể xóa tác giả này."
+        success: "Xóa tác giả thành công."
+        not_found: "Không tìm thấy tác giả."
+      edit:
+        edit_author: "Chỉnh sửa thông tin tác giả"
+        save_change: "Lưu thay đổi"
+      update:
+        author_update: "Chỉnh sửa thông tin tác giả thành công!"
+      new:
+        title: "Tạo tác giả mới"
+        create: "Tạo mới"
+      form:
+        name: "Tên tác giả"
+        info: "Thông tin"
+      create:
+        add_success: "Tạo tác giả %{name} thành công."
+        create_fail: "Tạo tác giả mới có lỗi xảy ra. Bạn vui lòng kiểm tra lại thông tin."
+      load_author:
+        not_found: "Không tìm thấy tác giả có mã số %{id}."
+    singers:
+      index:
+        title: "Quản lý ca sĩ"
+        quantity_songs: "Số bài hát"
+        name: "Tên ca sĩ"
+        info: "Thông tin"
+        action: "Hành động"
+        search: "Tìm kiếm"
+        create: "Tạo mới"
+      singer:
+        confirm: "Bạn có chắc chắn xóa ca sĩ này không?"
+      destroy:
+        has_songs: "Có bài hát do ca sĩ này thể hiện. Bạn không thể xóa ca sĩ này."
+        success: "Xóa ca sĩ thành công."
+        not_found: "Không tìm thấy ca sĩ."
+      edit:
+        edit_singer: "Chỉnh sửa thông tin ca sĩ"
+        save_change: "Lưu thay đổi"
+      update:
+        singer_update: "Chỉnh sửa thông tin ca sĩ thành công!"
+      new:
+        title: "Tạo ca sĩ mới"
+        create: "Tạo mới"
+      form:
+        name: "Tên ca sĩ"
+        info: "Thông tin"
+      create:
+        add_success: "Tạo ca sĩ %{name} thành công."
+        create_fail: "Tạo ca sĩ mới có lỗi xảy ra. Bạn vui lòng kiểm tra lại thông tin."
+      load_singer:
+        not_found: "Không tìm thấy ca sĩ có mã số %{id}."
+    lyrics:
+      index:
+        title: "Quản lý lời bài hát"
+        filter: "Lọc"
+        content: "Nội dung"
+        commenter: "Người chia sẻ"
+        song: "Bài hát"
+        created: "Thời gian tạo"
+        status: "Trạng thái"
+        accept: "Phê duyệt"
+        action: "Hành động"
+      lyrics:
+        show: "Xem chi tiết"
+        delete: "Xóa"
+        sure: "Bạn có chắc hắn muốn xóa lời bài hát này không ?"
+        unaccept: "Hủy phê duyệt"
+        accept: "Phê duyệt"
+      accept:
+        accept_successfully: "Phê duyệt lời bài hát thành công!"
+        accept_failed: "Phê duyệt lời bài hát đã xảy ra lỗi."
+      unaccept:
+        unaccept_successfully: "Hủy phê duyệt lời bài hát thành công!!"
+        unaccept_failed: "Hủy phê duyệt lời bài hát đã xảy ra lỗi."
+      destroy:
+        delete_successfully: "Bạn đã xóa lời bài hát thành công !!"
+        delete_failed: "Đã xảy ra lỗi, lời bài hát này chưa được xóa"
+    reports:
+      index:
+        title: "Quản lý lượt báo cáo"
+        filter: "Lọc"
+        reason: "Lý do"
+        sender: "Người gửi"
+        song: "Bài hát"
+        created: "Thời gian đăng"
+        action: "Hành động"
+      reports:
+        show: "Xem chi tiết"
+        delete: "Xóa"
+        sure: "Bạn có chắc chắn muốn xóa báo cáo này không !!"
+      destroy:
+        delete_successfully: "Bạn đã xóa báo cáo thành công !!"
+        delete_failed: "Đã xảy ra lỗi, báo cáo chưa được xóa"
+    comments:
+      index:
+        title: "Quản lý lượt bình luận"
+        filter: "Lọc"
+        content: "Nội dung"
+        commenter: "Người tạo"
+        song: "Bài hát"
+        created: "Thời gian đăng"
+        action: "Hành động"
+      comment:
+        show: "Xem chi tiết"
+        delete: "Xóa"
+        sure: "Bạn có chắc chắn muốn xóa bình luận này không !!"
+      destroy:
+        delete_successfully: "Bạn đã xóa bình luận thành công !!"
+        delete_failed: "Đã xảy ra lỗi, bình luận chưa được xóa"
+    songs:
+      index:
+        title: "Quản lý bài hát"
+        filter: "Lọc"
+        name: "Tên bài hát"
+        uploader: Người đăng
+        view: "Số lượt nghe"
+        comment: "Lượt bình luận"
+        reports: "Lượt báo cáo"
+        lyrics: "Lời bài hát"
+        category: "Thể loại"
+        created: "Thời gian đăng"
+        action: "Hành động"
+      songs:
+        show: "Xem chi tiết"
+        delete: "Xóa"
+        sure: "Bạn có chắc chắn muốn xóa bài hát này không!!"
+      destroy:
+        delete_successfully: "Xóa bài hát thành công!!"
+        delete_failed: "Xóa bài hát thất bại."
+  static_pages:
+    home:
+      usernotfound: "Không tìm thấy người dùng"
+  shared:
+    header:
+      B: "B"
+      music: "Music"
+      songs: "Ca khúc"
+      playlists: "Playlists"
+      search: "Tìm kiếm"
+      manage: "Trang quản lý"
+      upload: "Đăng bài hát"
+      profile: "Trang cá nhân"
+      signup: "Đăng ký"
+      login: "Đăng nhập"
+      logout: "Đăng xuất"
+      setting: "Cài đặt tài khoản"
+    footer:
+      B: "B"
+      music: "Music"
+      blockquote: "Bạn đã bao giờ nghĩ về cuộc sống sẽ là gì nếu không có âm nhạc?
+        Âm nhạc là một phương tiện giúp cho chúng ta giải trí,
+        xóa bỏ căng thẳng, là cách để chúng ta học hỏi, phát triển cảm xúc bản thân.
+        Nếu như không có âm nhạc có lẽ cuộc sống sẽ thật yên tĩnh và tẻ nhạt"
+      products: "Products"
+      useful_link: "Useful links"
+      link: "Useful links"
+      address: "Handico Office, Pham Hung Street, HaNoi, VietNam"
+      email: "framgia.com"
+      tel: "+ 01 234 567 88"
+      fax: "+ 01 234 567 89"
+      copyright: "© 2018 Copyright"
+      get_social_network: "Get connected with us on social networks!"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      invalid: "Thông tin không hợp lệ."
+      check_email_active: "Vui lòng kiểm tra email để xác thực tài khoản."
+      locked_account: "Tài khoản truy cập của bạn đã bị khóa do bạn đã đăng nhiều tin rác."
+    form:
+      login: "Đăng nhập"
+      remember: "Ghi nhớ tài khoản"
+      forgot_password: "Quên mật khẩu"
+      not_have_account: "Bạn chưa có tài khoản? "
+      signup: "Đăng ký tại đây"
+  users:
+    login_request: "Bạn cần đăng nhập để tiếp tục"
+    invalid_action: "Truy cập thất bại. Trang náy hiện không có"
+    locked: "Tài khoản truy cập của bạn đã bị khóa do bạn đã đăng nhiều tin rác."
+    new:
+      create: "Đăng ký"
+      signup: "Tạo tài khoản"
+    create:
+      success: "Hãy kiểm tra email đã được gửi cho bạn để xác thực tài khoản"
+      fail: "Tạo tài khoản thất bại. Bạn hãy kiểm tra lại tài khoản"
+    user_board:
+      info: "Thông tin cá nhân"
+      setting: "Cài đặt"
+      my_song: "Ca khúc của tôi"
+      my_playlist: "Playlists của tôi"
+    show:
+      title: "Thông tin tài khoản"
+      info: "Thông tin"
+      name: "Họ và tên: %{name}"
+      email: "Email: %{email}"
+      phone: "Điện thoại: %{phone}"
+    edit:
+      update: "Cập nhật"
+      setting: "Cài đặt"
+      profile_updated: "Thông tin được cập nhật thành công."
+      not_update: "Thông tin chưa được cập nhật, đã xảy ra lỗi"
+    my_album:
+      title_my_album: "Albums của tôi"
+      header_my_album: "Danh sách Albums"
+      add_album: "Tạo album mới"
+      name_album: "Tên album:"
+      placeholder_name_album: "Bạn hãy nhập tên album..."
+      add: "Tạo mới"
+      notice: "Thông báo:"
+      notice_content: "Bạn chưa tạo album nào"
+    list_my_album:
+      sure_delete: "Bạn có chắc chắn muỗn xóa album này không!!"
+    list_my_song:
+      delete: "Xóa"
+      you_sure: "Bạn có chắc chắn muốn xóa bài hát này không!!"
+      edit: "Chinh sửa"
+    my_song:
+      notice: "Thông báo:"
+      notice_content: "Bạn chưa tải lên bài hát nào"
+      my_song: "Bài hát của tôi"
+      headermysong: "Danh sách bài hát"
+  password_resets:
+    create:
+      email_not_found: "Không tìm thấy địa chỉ email này trong hệ thống. Bạn vui lòng kiểm tra lại"
+      instruction: "Chúng tôi đã gửi một emal hướng dẫn lấy lại mật khẩu về địa chỉ mail của bạn.
+      Bạn hãy làm theo hướng dẫn để đặt lại mật khẩu"
+    update:
+      password_not_empty: "Mật khẩu không được để trống"
+      success: "Lấy lại mật khẩu thành công."
+    check_expiration:
+      password_expired: "Đường dẫn lấy lại mật khẩu đã hết hiệu lực"
+    new:
+      title: "Quên mật khẩu"
+      header: "Quên mật khẩu"
+      instruction: "Bạn cần nhập email tài khoản để tạo mật khẩu mới."
+      send: "Lấy lại mật khẩu"
+      label_email: "Email"
+    edit:
+      title: "Quên mật khẩu"
+      header: "Quên mật khẩu"
+      label_password: "Mật khẩu"
+      confirmation: "Nhập lại mật khẩu"
+      btn_update: "Tạo mật khẩu mới"
+  user_mailer:
+    password_reset:
+      header: "Lấy lại mật khẩu"
+      subject: "Lấy lại mật khẩu"
+      click_link: "Để tạo mật khẩu mới bạn vui lòng click vào đường dẫn dưới đây:"
+      reset_link: "Đặt lại mật khẩu"
+      content_p: "Đường dẫn này sẽ có hiệu lực trong 2 tiếng."
+      content_p2: "Nếu bạn không yêu cầu đặt lại mật khẩu,
+         vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ.."
+      content_1: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+      content_2: "TLiên kết này sẽ hết hạn sau hai giờ nữa.
+         Nếu bạn không yêu cầu đặt lại mật khẩu,
+         vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ.."
+    account_activation:
+      account_activation: "[IMusic] Xác thực tài khoản"
+      title: "Chào mừng bạn trở thành thành viên của IMusic!"
+      hi: "Xin chào %{name},"
+      content: "Chào mừng bạn đến với IMusic! Click vào đường dẫn dưới đây để xác thực tài khoản của bạn:"
+      link: "Xác thực tài khoản"
+  account_activations:
+    edit:
+      invalid_activation_link: "Đường dẫn không hợp lệ."
+      account_activated: "Tài khoản đã được xác nhận!"
+  songs:
+    show:
+      lyric_here: "Hãy nhập lời bài hát ..."
+      lyrics_contribution: "Chia sẻ lời bài hát"
+      reason: "Lý do bạn báo cáo bài hát này?"
+      reports: "Gửi báo cáo về bài hát %{name}"
+      placeholder_comments: "Nhập bình luận ..."
+      comments: "Bình luận"
+      likes: "Lượt thích"
+      dislike: "Không thích"
+      like: "Thích"
+      lyric: "Lời bài hát:"
+      report: "Báo cáo"
+      ranking: "Xếp hạng"
+      tags: "Tags"
+      tag1: "Dunderpatrullen-Singularity"
+      tag2: "Dunderpatrullen"
+      tag3: "Singularity"
+      no_found_song: "Không tìm thấy bài hát!!"
+    new:
+      title_upload: "Đăng bài hát"
+      headerupload: "Đăng tải bài hát"
+      namesong: "Tên bài hát:"
+      placeholder_song: "Nhập tên bài hát..."
+      namesinger: "Ca sĩ:"
+      nameauthor: "Tác giả:"
+      imagename: "Hình đại diện:"
+      filesong: "File bài hát:"
+      category_select: "Thể loại:"
+      upload: "Đăng bài hát"
+      add: "Thêm"
+    edit:
+      title_edit_song: "Chỉnh sửa bài hát"
+      headeredit: "Chỉnh sửa bài hát"
+      namesong: "Tên bài hát:"
+      placeholder_song: "Nhập tên bài hát..."
+      namesinger: "Ca sĩ:"
+      nameauthor: "Tác giả:"
+      imagename: "Hình đại diện:"
+      filesong: "File bài hát:"
+      category_select: "Thể loại:"
+      upload: "Lưu thay đổi"
+      add: "Thêm"
+    singer_fields:
+      placeholder_singer: "Nhập tên ca sĩ..."
+      remove: "Xóa"
+    author_fields:
+      placeholder_author: "Nhập tên tác giả..."
+      remove: "Xóa"
+    create:
+      add_song_successfully: "Đăng tải bài hát thành công!!"
+      add_song_fail: "Đã xảy ra lỗi, đăng tải bài hát không thành công!!"
+    update:
+      song_updated: "Cập nhật thông tin bài hát thành công!!"
+      song_update_failed: "Đã xảy ra lỗi, cập nhật thông tin bài hát không thành công!!"
+    destroy:
+      delete_successfully: "Xóa bài hát thành công!!"
+      delete_song_fail: "Đã xảy ra lỗi, chưa xóa được bài hát!!"
+  albums:
+    create:
+      add_album_successfully: " Thêm album mới thành công!"
+      add_album_fail: "Đã xảy ra lỗi, thêm album không thành công!!!"
+    destroy:
+      delete_album_successfully: "Xóa album thành công!!"
+      delete_album_fail: "Đã xảy ra lỗi, chưa xóa được album!!"
+      must_current_user: "Bạn không phải người tạo nên không thể xóa album này!!!"
+    edit:
+      header_edit_album: "Chỉnh sửa album"
+      edit_name: "Tên album mới:"
+      placeholder_name: "Nhập tên album..."
+      upload: "Lưu thay đổi"
+    update:
+      update_album_successfully: "Cập nhật thông tin album thành công!!"
+      update_album_fail: "Đã xảy ra lỗi, cập nhật thông tin album không thành công!!!"
+  lyrics:
+    create:
+      create_successfully: "Chia sẻ lời bài hát thành công. Người quản trị sẽ phê duyệt trong 2 giờ!"
+    lyrics:
+      see_more: "Xem thêm..."
+  comments:
+    create:
+      create_successfully: "Đăng bình luận thành công!"
+      create_fail: "Đã xảy ra lỗi, bình luận chưa được tạo!!"
+    destroy:
+      delete_successfully: "Xóa bình luận thành công!"
+      delete_fail: "Đã xảy ra lỗi, bình luận chưa được xóa!!"
+      must_current_user: "Bạn không phải người tạo nên không thể xóa bình luận này!!"
+    update:
+      updated: "Cập nhật nội dung bình luận thành công!!"
+      update_failed: "Đã xảy ra lỗi, cập nhật bình luận không thành công!!!"
+  report_successfully: "Cảm ơn bạn đã tạo báo cáo. Chúng tôi sẽ xem xét sau 2 giờ"
+  report_failed: "Báo cáo xảy ra lỗi"

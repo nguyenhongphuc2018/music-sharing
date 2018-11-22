@@ -12,25 +12,31 @@
       </div>
       <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#"><%= t ".songs" %>
+          <li class="active"><a href="#"><%= t ".songs" %>
             <span class="sr-only">(current)</span></a></li>
           <li><a href="#"><%= t ".playlists" %></a></li>
         </ul>
-        <form class="navbar-form navbar-left input-group" role="search">
+        <%= form_with url: search_path_url, method: :get, local: true,
+        class:"navbar-form navbar-left input-group" do |form| %>
           <div class="form-group">
-            <input type="text" class="form-control width-45"
-              id="navbar-search-input" placeholder=<%= t ".songs" %> >
+            <%= form.text_field :q, class:"form-control width-45 border-radius-none",
+              id:"navbar-search-input", placeholder: t(".placeholder") %>
             <span class="input-group-btn">
-              <button type="button" class="btn bg-navy">
-                <%= t ".search" %>
-              </button>
+              <%= form.submit "Search", class: "btn bg-navy" %>
             </span>
           </div>
-        </form>
+        <% end %>
       </div>
       <div class="navbar-custom-menu navbar-right">
         <ul class="nav navbar-nav">
           <% if logged_in? %>
+            <% if current_user.admin? %>
+                <li>
+                  <%= link_to admin_path do %>
+                    <%= t ".manage" %> <i class="fa fa-user-circle"></i>
+                  <% end %>
+                </li>
+              <% end %>
             <li class="<%= 'active' if current_page?(new_song_path) %>">
               <%= link_to new_song_path do %>
                 <%= t ".upload" %> <i class="fa fa-upload"></i>
@@ -38,12 +44,12 @@
             </li>
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <%= image_tag "/assets/img_lights.jpg", class:"user-image" %>
+                <%= image_tag get_avatar(current_user), class:"user-image" %>
                 <span class="hidden-xs"><%= current_user.name %></span>
               </a>
               <ul class="dropdown-menu">
                 <li class="user-header">
-                  <%= image_tag "/assets/img_lights.jpg", class:"img-fluid" %>
+                  <%= image_tag get_avatar(current_user), class:"img-fluid" %>
                   <p><%= current_user.name %></p>
                 </li>
                 <li class="user-footer">

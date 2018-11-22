@@ -1,0 +1,23 @@
+<tr class="hoverable">
+  <td>
+    <%= link_to song do %>
+      <%= image_tag  "music", class: "img-fluid height-10" %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to song.name, song, class: "font-weight-bold" %>
+    <br>
+    <i class="fa fa-microphone"></i> &nbsp;<%= t ".singer" %>:
+    <%= render partial: "singer", collection: song.singers, as: :singer %>
+    <br>
+    <i class="fa fa-th"></i> <%= t ".category" %>: 
+    <small class="blue-light-1-text">
+      <%= song.category_name %>
+    </small> 
+  </td>
+  <%= render  partial: "author", collection: song.authors, as: :author %>
+  <td class="line-height-10 gray-text">
+    <i class="fa fa-user"></i> 
+    <%= song.user.name %>
+  </td>
+</tr>

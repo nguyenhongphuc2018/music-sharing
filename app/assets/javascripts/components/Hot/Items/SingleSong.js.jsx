@@ -50,19 +50,24 @@ class SingleSong extends React.Component {
       play = (<i className="fa fa-play-circle fs-10" />)
       showSong = null
     }
+    let id = Math.floor(Math.random()*10)
+    let path = "https://picsum.photos/190/170?image=106".concat(id.toString())
+    let avatar = (<img src={path} className="img-fluid " alt="smaple image" />)
     return(
       <div className="col-xs-2 pb-1">
         <div className="view overlay" onClick={this.onclick}>
-          <img src="http://placehold.it/190x170" className="img-fluid " alt="smaple image" />
+          <img src={song.image.image_url.url} className="img-fluid height-100" alt="smaple image" />
           <div className="mask flex-center rgba-cyan-strong">
             <p className="white-text font-weight-bold play" >
               {play}
+
             </p>
           </div>
         </div>
         <div className="m-0">
           <h4 className="mb-0">
             <a href={song_path} className="black-text">{song.name}</a>
+
           </h4>
           <small>
             <a href={song_path}>View: {song.view}</a>

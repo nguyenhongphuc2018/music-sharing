@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def my_album
     @album = Album.new
     @albums = Album.includes(:songs).order_name
+    @show_songs = Song.page(params[:page]).per 20
   end
 
   def show; end
@@ -53,6 +54,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email, :phone, :password,
-      :password_confirmation
+      :password_confirmation, image_attributes: [:id,
+      :image_url, :imageable_id, :imageable_type, :_destroy]
   end
 end

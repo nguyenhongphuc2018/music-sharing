@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get "/", to: "dashboards#index"
     resources :categories
+    resources :singers
+    resources :authors
     resources :users, except: %i(new create)
   end
 end
